@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 <html>
@@ -7,9 +6,26 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Class 2 &#8212; Python for Neuroscience</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
@@ -21,6 +37,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -29,10 +48,10 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/sphinx-book-theme.js"></script>
     <script src="../../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
     <script src="../../_static/sphinx_tabs/tabs.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -44,11 +63,11 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Tutorials" href="../../tutorials.html" />
+    <link rel="next" title="Class 3" href="../class_3/class_3.html" />
     <link rel="prev" title="Class 1" href="../class_1/class_1.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
 
 
 
@@ -104,6 +123,16 @@
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Class 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_3/class_3.html">
+     Class 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_3/class_3.html#errors-and-exceptions">
+     Errors and Exceptions
     </a>
    </li>
   </ul>
@@ -187,7 +216,8 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -205,11 +235,6 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/sagol-python-for-neuroscientists/textbook/blob/master/source/classes/class_2/class_2.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
         
     </div>
 </div>
@@ -218,6 +243,7 @@
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
+        
         <div class="tocsection onthispage pt-5 pb-3">
             <i class="fas fa-list"></i> Contents
         </div>
@@ -256,8 +282,8 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#object-oriented-programming">
-   Object-Oriented Programming
+  <a class="reference internal nav-link" href="#object-oriented-programming-part-1">
+   Object-Oriented Programming: Part 1
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -385,6 +411,7 @@
 </ul>
 
         </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -465,16 +492,16 @@
 <p>Activating a virtual environment means modifying your working environment to use a particular, isolated installation of Python (created in <a class="reference internal" href="#create"><span class="std std-ref">Creating a Virtual Environment</span></a>). This will normally also “override” some other related CLI tools with those installed within the virtual environment’s <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory (such as <code class="docutils literal notranslate"><span class="pre">pip</span></code>), and sometimes also change some OS-related environment variables.</p>
 <p>To activate the virtual environment and use the newly created isolated Python environment, simply run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="1c04e2d5-6819-428c-84bd-85dc677272f7" name="77f9e120-372c-46f1-a701-3a21e9b20f17" type="radio">
-</input><label class="tabbed-label" for="1c04e2d5-6819-428c-84bd-85dc677272f7">
+<input checked="checked" id="2d7be847-6bc3-40d0-9035-e328a418bee0" name="2ad170d1-65ca-4f93-8298-c3d52320b6e8" type="radio">
+</input><label class="tabbed-label" for="2d7be847-6bc3-40d0-9035-e328a418bee0">
 Linux/MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">source</span> &lt;venv&gt;/bin/activate
 </pre></div>
 </div>
 <p><em>* Replace <code class="docutils literal notranslate"><span class="pre">&lt;venv&gt;</span></code> with your virtual environment’s directory path.</em></p>
 </div>
-<input id="1d2fbd63-5b77-451d-baa6-3a471e64aec4" name="77f9e120-372c-46f1-a701-3a21e9b20f17" type="radio">
-</input><label class="tabbed-label" for="1d2fbd63-5b77-451d-baa6-3a471e64aec4">
+<input id="3f4a06d8-0d36-4e7a-bbfb-7dcd0e3f4f40" name="2ad170d1-65ca-4f93-8298-c3d52320b6e8" type="radio">
+</input><label class="tabbed-label" for="3f4a06d8-0d36-4e7a-bbfb-7dcd0e3f4f40">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">C:\&gt; &lt;venv&gt;\Scripts\activate</span>
 </pre></div>
@@ -485,16 +512,16 @@ Windows</label><div class="tabbed-content docutils">
 <p>You should now see your virtual environment’s directory name used as a prefix (<code class="docutils literal notranslate"><span class="pre">(venv)</span></code>) in your terminal window.</p>
 <p>To validate the activation, run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="a7ae3921-5cc6-4f46-b3ef-f9197c1fdb0d" name="e7b74bfd-e14e-4b21-82cd-400572af9833" type="radio">
-</input><label class="tabbed-label" for="a7ae3921-5cc6-4f46-b3ef-f9197c1fdb0d">
+<input checked="checked" id="6490fc01-65ad-4449-b634-b2a21e8a73e0" name="07dfc7c1-19cf-4081-88c1-2f17387db5ad" type="radio">
+</input><label class="tabbed-label" for="6490fc01-65ad-4449-b634-b2a21e8a73e0">
 Linux/MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$</span> which python
 <span class="go">&lt;venv&gt;/bin/python</span>
 </pre></div>
 </div>
 </div>
-<input id="506582bd-c1db-4267-9539-27b748071dce" name="e7b74bfd-e14e-4b21-82cd-400572af9833" type="radio">
-</input><label class="tabbed-label" for="506582bd-c1db-4267-9539-27b748071dce">
+<input id="e70f1e5d-cb90-4823-9d37-b1d03e710d8e" name="07dfc7c1-19cf-4081-88c1-2f17387db5ad" type="radio">
+</input><label class="tabbed-label" for="e70f1e5d-cb90-4823-9d37-b1d03e710d8e">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="go">C:\&gt; where python</span>
 <span class="go">&lt;venv&gt;\Scripts\python</span>
@@ -521,8 +548,8 @@ Windows</label><div class="tabbed-content docutils">
 </ol>
 </div>
 </div>
-<div class="section" id="object-oriented-programming">
-<h2>Object-Oriented Programming<a class="headerlink" href="#object-oriented-programming" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="object-oriented-programming-part-1">
+<h2>Object-Oriented Programming: Part 1<a class="headerlink" href="#object-oriented-programming-part-1" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="introduction">
 <h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h3>
 <p>There are three main programming paradigms in use in mainstream programming languages:</p>
@@ -694,7 +721,7 @@ Windows</label><div class="tabbed-content docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7f5121d65d30&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7f14952ed1f0&gt;
 </pre></div>
 </div>
 </div>
@@ -821,7 +848,7 @@ Windows</label><div class="tabbed-content docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7f51215320a0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7f1494acf220&gt;
 </pre></div>
 </div>
 </div>
@@ -1557,7 +1584,7 @@ The center of the moved rectange is (0.0, 0.0)
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="../class_1/class_1.html" title="previous page">Class 1</a>
-    <a class='right-next' id="next-link" href="../../tutorials.html" title="next page">Tutorials</a>
+    <a class='right-next' id="next-link" href="../class_3/class_3.html" title="next page">Class 3</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -1576,7 +1603,10 @@ The center of the moved rectange is (0.0, 0.0)
       </div>
     </div>
 
-    <script src="../../_static/js/index.js"></script>
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
     
   </body>
 </html>

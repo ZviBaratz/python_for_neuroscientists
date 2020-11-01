@@ -133,6 +133,11 @@
      Class 4
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class_5/class_5.html">
+     Class 5
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -386,7 +391,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data_reader: &lt;__main__.DataReader object at 0x7f16040f3280&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data_reader: &lt;__main__.DataReader object at 0x7f8968d382b0&gt;
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
@@ -434,20 +439,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">455</span><span class="n">de5ab5f01</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">tifffile</span>  <span class="c1"># Python&#39;s most popular tif processing library</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">class</span> <span class="nc">TifDataReader</span><span class="p">(</span><span class="n">DataReader</span><span class="p">):</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="s2">&quot;&quot;&quot;A DataReader designated to read .tif files. </span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;tifffile&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <p>Inheritance happens when you write a different class’ name between the braces at the top line. This tells Python to transfer attributes and methods from the parent to this child. The instatiation (=magic) happens using the special syntax of <code class="docutils literal notranslate"><span class="pre">super().__init__(argumets)</span></code> - what it says is “create the super (i.e. parent) class and call its <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method with the given arguments.</p>
 <p>Besides that the only things that might catch the eye is the new method <code class="docutils literal notranslate"><span class="pre">verify_input()</span></code>, which the parent class didn’t require. This function, which I left unimplemented, checks that the given filename exists and that it’s indeed a tif file. The parent class didn’t mandate it, but I, as the implementer of the child class, deemed it necessary.</p>
@@ -462,15 +453,17 @@
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a.tif
+</pre></div>
+</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
 <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">5</span><span class="n">a9cdcd3ad5f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;a.tif&#39;</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">tif_data_reader</span> <span class="o">=</span> <span class="n">TifDataReader</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">tif_data_reader</span> <span class="o">=</span> <span class="n">TifDataReader</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">tif_data_reader</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">tif_data_reader</span><span class="o">.</span><span class="n">ends_with</span><span class="p">()</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">tif_data_reader</span><span class="o">.</span><span class="n">ends_with</span><span class="p">()</span>
 
-<span class="ne">NameError</span>: name &#39;TifDataReader&#39; is not defined
+<span class="ne">AttributeError</span>: &#39;TifDataReader&#39; object has no attribute &#39;ends_with&#39;
 </pre></div>
 </div>
 </div>
@@ -501,20 +494,6 @@
     <span class="k">def</span> <span class="nf">summarize</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;A simple mean of the data.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">5</span><span class="n">d136f4cbe07</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">imageio</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">class</span> <span class="nc">PngDataReader</span><span class="p">(</span><span class="n">DataReader</span><span class="p">):</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="s2">&quot;&quot;&quot;A DataReader designated to read .tif files. </span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;imageio&#39;
 </pre></div>
 </div>
 </div>
@@ -615,7 +594,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Before calling, the log for regular shows: {}
-After the call, regular shows {&#39;iphone_8&#39;: 1604175987.2836175} and the iPhone shows {&#39;lg_v10&#39;: 1604175987.2836182}
+After the call, regular shows {&#39;iphone_8&#39;: 1604254064.6304655} and the iPhone shows {&#39;lg_v10&#39;: 1604254064.6304662}
 </pre></div>
 </div>
 </div>
@@ -631,7 +610,7 @@ After the call, regular shows {&#39;iphone_8&#39;: 1604175987.2836175} and the i
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Before calling, the log for first iPhone shows: {}
-After the call, the first iPhone shows {&#39;second_iphone_X&#39;: 1604175987.292166} and the second shows {&#39;first_iphone_8&#39;: 1604175987.2921667}
+After the call, the first iPhone shows {&#39;second_iphone_X&#39;: 1604254064.6383522} and the second shows {&#39;first_iphone_8&#39;: 1604254064.6383529}
 </pre></div>
 </div>
 </div>

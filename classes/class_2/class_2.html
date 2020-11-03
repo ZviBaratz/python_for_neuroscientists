@@ -25,8 +25,8 @@
     href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -48,8 +48,6 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
-    <script src="../../_static/sphinx_tabs/tabs.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -443,31 +441,23 @@
 </div>
 <p>There are numerous tools for creating and managing virtual environments with Python. In this course we will use <a class="reference external" href="https://docs.python.org/3/library/venv.html#module-venv"><code class="docutils literal notranslate"><span class="pre">venv</span></code></a>, which is one of Python’s built-in packages and is therefore a simple option that will always be available to you.</p>
 <p>Creating a new virtual environment with <code class="docutils literal notranslate"><span class="pre">venv</span></code> is as easy as running:</p>
-<div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-0-0 docutils container">
-<div class="docutils container">
-<p>Linux/macOS</p>
-</div>
-</div>
-<div class="item sphinx-data-tab-0-1 docutils container">
-<div class="docutils container">
-<p>Windows</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active docutils container">
+<div class="tabbed-set docutils">
+<input checked="checked" id="79f42f46-7ff1-4951-adf9-20790caa3a13" name="4cc9a770-6f2b-4b3e-9030-531c9cdefbb5" type="radio">
+</input><label class="tabbed-label" for="79f42f46-7ff1-4951-adf9-20790caa3a13">
+Linux/macOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python3 -m venv /path/to/new/virtual/environment/
 </pre></div>
 </div>
 </div>
-<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-1 docutils container">
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">C:\&gt; C:\Python38\python -m venv C:\path\to\new\virtual\environment\</span>
+<input id="278af027-b72b-48ae-9e21-2117c5fbdab7" name="4cc9a770-6f2b-4b3e-9030-531c9cdefbb5" type="radio">
+</input><label class="tabbed-label" for="278af027-b72b-48ae-9e21-2117c5fbdab7">
+Windows</label><div class="tabbed-content docutils">
+<div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">C:\&gt;</span> C:\Python38\python -m venv C:\path\to\new\virtual\environment\
 </pre></div>
 </div>
 </div>
-<p>We are calling <code class="docutils literal notranslate"><span class="pre">&lt;python</span> <span class="pre">binary&gt;</span> <span class="pre">-m</span></code> to execute the <code class="docutils literal notranslate"><span class="pre">venv</span></code> module as a script and pass it the path in which it should create the new virtual environment.</p>
 </div>
+<p>We are calling <code class="docutils literal notranslate"><span class="pre">&lt;python</span> <span class="pre">binary&gt;</span> <span class="pre">-m</span></code> to execute the <code class="docutils literal notranslate"><span class="pre">venv</span></code> module as a script and pass it the path in which it should create the new virtual environment.</p>
 </div>
 <div class="section" id="the-virtual-environment-directory">
 <h3>The Virtual Environment Directory<a class="headerlink" href="#the-virtual-environment-directory" title="Permalink to this headline">¶</a></h3>
@@ -497,18 +487,18 @@
 <p>Activating a virtual environment means modifying your working environment to use a particular, isolated installation of Python (created in <a class="reference internal" href="#create"><span class="std std-ref">Creating a Virtual Environment</span></a>). This will normally also “override” some other related CLI tools with those installed within the virtual environment’s <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory (such as <code class="docutils literal notranslate"><span class="pre">pip</span></code>), and sometimes also change some OS-related environment variables.</p>
 <p>To activate the virtual environment and use the newly created isolated Python environment, simply run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="4704a0a5-999f-411d-b84f-e40069d05b95" name="08444e67-c114-4535-aec6-0b1089cbe69d" type="radio">
-</input><label class="tabbed-label" for="4704a0a5-999f-411d-b84f-e40069d05b95">
+<input checked="checked" id="76bcf0f8-c0f9-47a8-94a0-9cf5a5d10d29" name="f2f50672-be8b-4d45-9a50-e3625eb95230" type="radio">
+</input><label class="tabbed-label" for="76bcf0f8-c0f9-47a8-94a0-9cf5a5d10d29">
 Linux/MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">source</span> &lt;venv&gt;/bin/activate
 </pre></div>
 </div>
 <p><em>* Replace <code class="docutils literal notranslate"><span class="pre">&lt;venv&gt;</span></code> with your virtual environment’s directory path.</em></p>
 </div>
-<input id="d46605f1-789e-493e-95d6-6ca60dfd02bf" name="08444e67-c114-4535-aec6-0b1089cbe69d" type="radio">
-</input><label class="tabbed-label" for="d46605f1-789e-493e-95d6-6ca60dfd02bf">
+<input id="cb8e6fd9-7f2b-4138-ab5d-d520f6e5f7f1" name="f2f50672-be8b-4d45-9a50-e3625eb95230" type="radio">
+</input><label class="tabbed-label" for="cb8e6fd9-7f2b-4138-ab5d-d520f6e5f7f1">
 Windows</label><div class="tabbed-content docutils">
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">C:\&gt; &lt;venv&gt;\Scripts\activate</span>
+<div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp">C:\&gt;</span> <span class="p">&lt;</span>venv<span class="p">&gt;</span>\Scripts\activate
 </pre></div>
 </div>
 <p><em>* Replace <code class="docutils literal notranslate"><span class="pre">&lt;venv&gt;</span></code> with your virtual environment’s directory path.</em></p>
@@ -517,24 +507,24 @@ Windows</label><div class="tabbed-content docutils">
 <p>You should now see your virtual environment’s directory name used as a prefix (<code class="docutils literal notranslate"><span class="pre">(venv)</span></code>) in your terminal window.</p>
 <p>To validate the activation, run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="7cd58b77-888a-40fc-8b98-50f19a0e546e" name="abfdc53f-9ead-4ee9-940f-ea94c375650a" type="radio">
-</input><label class="tabbed-label" for="7cd58b77-888a-40fc-8b98-50f19a0e546e">
+<input checked="checked" id="4fcca24a-c40c-481b-9458-58ee0f2067e7" name="c9b362c9-b753-4814-b678-30a227f2759d" type="radio">
+</input><label class="tabbed-label" for="4fcca24a-c40c-481b-9458-58ee0f2067e7">
 Linux/MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">$</span> which python
 <span class="go">&lt;venv&gt;/bin/python</span>
 </pre></div>
 </div>
 </div>
-<input id="547afb59-2e43-477d-9c4e-813a5e2518eb" name="abfdc53f-9ead-4ee9-940f-ea94c375650a" type="radio">
-</input><label class="tabbed-label" for="547afb59-2e43-477d-9c4e-813a5e2518eb">
+<input id="fc011517-4dcc-48ca-9467-d8db049bf55e" name="c9b362c9-b753-4814-b678-30a227f2759d" type="radio">
+</input><label class="tabbed-label" for="fc011517-4dcc-48ca-9467-d8db049bf55e">
 Windows</label><div class="tabbed-content docutils">
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="go">C:\&gt; where python</span>
-<span class="go">&lt;venv&gt;\Scripts\python</span>
+<div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">C:\&gt;</span> where python
+<span class="gp">&lt;venv&gt;</span>\Scripts\python
 </pre></div>
 </div>
 </div>
 </div>
-<p>This should print out the path of the Python interpreter within the virtual environment’s directory.</p>
+<p>The returned path should be the path of the Python interpreter within the virtual environment’s directory.</p>
 <p>For the purposes of this course one virtual environment will probably be enough. Always remember to activate it before starting work, and be sure to create a new virtual environment for any new project you begin in the future.</p>
 </div>
 <div class="section" id="exercise">
@@ -569,10 +559,10 @@ Windows</label><div class="tabbed-content docutils">
 <h3>Procedural Programming<a class="headerlink" href="#procedural-programming" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=Ct-lOOUqmyY"><img alt="Procedural Programming PB&amp;J" src="http://img.youtube.com/vi/Ct-lOOUqmyY/0.jpg" /></a></p>
 <p>The <em>procedural</em> paradigm is the most widely used paradigm… in the academia. And it’s probably the one you’re most familiar with from your work with MATLAB.</p>
+<p>For example, if we wanted to write a naive script that multiplies the elements in two lists, we could write something like:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We could write:</span>
-<span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">l2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">item1</span><span class="p">,</span> <span class="n">item2</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">):</span>
@@ -587,10 +577,10 @@ Windows</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
+<p>If we later run into more lists we need to multiply, we’ll again write:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># And when we have more lists to multiply we&#39;ll again write:</span>
-<span class="n">l3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
 <span class="n">l4</span> <span class="o">=</span> <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">]</span>
 <span class="n">result2</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">item3</span><span class="p">,</span> <span class="n">item4</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">l3</span><span class="p">,</span> <span class="n">l4</span><span class="p">):</span>
@@ -605,13 +595,24 @@ Windows</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
-<p>But we’re seeing a pattern here. The important DRY principle requires “Don’t Repeat Yourself”, so we define a function to replace these two implementations:</p>
+<p>At this point we’ll recognize a pattern and immediately be rememinded of the DRY (“Don’t Repeat Yourself”) principle, leading us to define a function and replace these two parts:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">list_multiplier</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Multiply two lists element-wise.</span>
-<span class="sd">    Returns a list with the result</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    l1 : list</span>
+<span class="sd">        First list</span>
+<span class="sd">    l2 : list</span>
+<span class="sd">        Second list    </span>
+<span class="sd">    </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    list</span>
+<span class="sd">        Element-wise multiplication result</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">item1</span><span class="p">,</span> <span class="n">item2</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">):</span>
@@ -622,10 +623,10 @@ Windows</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
-<p>This new <em>procedure</em> does one thing, and one thing only. This is what’s so powerful about it.</p>
+<p>This new procedure does one thing, and one thing only. This is what’s so powerful about it.</p>
 <p>Procedural programming allows us to group and order our code base into small units, called functions or <strong>procedures</strong>, that have a specific, defined task.</p>
 <p>It usually contains a “wrapper” script that defines the order of running for these functions:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># my_wrapper_script.py</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">my_wrapper_script</span><span class="o">.</span><span class="n">py</span>
 <span class="k">def</span> <span class="nf">run_pipeline</span><span class="p">(</span><span class="n">foldername</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Main data pipeline script &quot;&quot;&quot;</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">get_user_input</span><span class="p">(</span><span class="n">foldername</span><span class="p">)</span>
@@ -633,6 +634,7 @@ Windows</label><div class="tabbed-content docutils">
     <span class="n">columnar_data</span> <span class="o">=</span> <span class="n">generate_columns</span><span class="p">(</span><span class="n">data_without_fieldnames</span><span class="p">,</span> <span class="n">num_of_columns</span><span class="p">)</span>
     <span class="c1"># ...</span>
     <span class="c1"># At the end of the file it will contain:</span>
+
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">foldername</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;/path/to/folder&#39;</span>  <span class="c1"># raw string</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">run_pipeline</span><span class="p">(</span><span class="n">foldername</span><span class="p">)</span>
@@ -658,19 +660,19 @@ Windows</label><div class="tabbed-content docutils">
 <p>The moment you realized that you have a recurring operation on strings - you have to encapsulate it in a function. Be <em>ruthless!</em><br />
 <br/></p>
 </li>
-<li><p>Parametrization</p>
+<li><p>Parametrization
+Instead of writing:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
     <span class="n">scaled_data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">*</span> <span class="mf">0.3</span>  <span class="c1">#  what is 0.3 exactly? Parametrize it.</span>
-
-<span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">na_concentration</span><span class="o">=</span><span class="mf">0.3</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Multiplies data by the Na concentration&quot;&quot;&quot;</span>
-    <span class="n">scaled_data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">*</span> <span class="n">na_concentration</span>
-
 </pre></div>
 </div>
-<p>But this is usually not enough. When calling the <code class="docutils literal notranslate"><span class="pre">process_data</span></code> parameterize the <code class="docutils literal notranslate"><span class="pre">na_concentration</span></code> variable as well:</p>
-</li>
-</ul>
+<p>We might do:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">na_concentration</span><span class="o">=</span><span class="mf">0.3</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Multiplies data by the Na concentration&quot;&quot;&quot;</span>
+    <span class="n">scaled_data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">*</span> <span class="n">na_concentration</span>
+</pre></div>
+</div>
+<p>But this is usually not enough. When calling the <code class="docutils literal notranslate"><span class="pre">process_data</span></code> parameterize the <code class="docutils literal notranslate"><span class="pre">na_concentration</span></code> variable as well. This will help you avoid a situation such as:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">b</span> <span class="o">*</span> <span class="n">c</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">a</span>
 <span class="n">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">)</span>
 <span class="c1"># Script continues...</span>
@@ -680,6 +682,8 @@ Windows</label><div class="tabbed-content docutils">
 <span class="c1"># the top of your script.</span>
 </pre></div>
 </div>
+</li>
+</ul>
 <p>While procedural programming works great for most simple tasks, it might be considered inferior when writing code that is meant to scale and be collaborated on.</p>
 </div>
 <div class="section" id="classes-and-objects">
@@ -726,7 +730,7 @@ Windows</label><div class="tabbed-content docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7f172034bdc0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7f099c680ac0&gt;
 </pre></div>
 </div>
 </div>
@@ -853,7 +857,7 @@ Windows</label><div class="tabbed-content docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7f17203189a0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Rectangle at 0x7f099c63e880&gt;
 </pre></div>
 </div>
 </div>
@@ -948,24 +952,23 @@ After:	p.x: 20, p.y: 10
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This doesn&#39;t work, look at the number of arguments:</span>
 <span class="n">p</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-<span class="c1"># Two arguments were given? We gave only one. The second was the self argument that is implicitly passed.</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">14</span><span class="o">-</span><span class="mi">07</span><span class="n">dc2a9995d9</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">14</span><span class="o">-</span><span class="n">cde66be33c83</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># This doesn&#39;t work, look at the number of arguments:</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">p</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Two arguments were given? We gave only one. The second was the self argument that is implicitly passed.</span>
 
 <span class="ne">TypeError</span>: transpose() takes 1 positional argument but 2 were given
 </pre></div>
 </div>
 </div>
 </div>
-<p>One thing is still missing though - each time we create the point we have a three step process:</p>
+<p>Two arguments were given? We gave only one. The second was the <code class="docutils literal notranslate"><span class="pre">self</span></code> argument that is implicitly passed.</p>
+<p>One thing is still missing though, each time we create the point we have a three step process:</p>
 <ol class="simple">
 <li><p>Create the instance: <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">Point()</span></code></p></li>
 <li><p>Add the <code class="docutils literal notranslate"><span class="pre">x</span></code> attribute: <code class="docutils literal notranslate"><span class="pre">p.x</span> <span class="pre">=</span> <span class="pre">2</span></code></p></li>
@@ -1108,24 +1111,33 @@ p.x: 20, p.y: 10
 </div>
 </div>
 </div>
+<p>If we now wish to create a new <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> instance and find its center, we can:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a new Rectangle instance and find its center</span>
-<span class="n">corner</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">corner</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">rect</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">corner</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="n">center</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">find_center</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The center of the rectange is </span><span class="si">{</span><span class="p">(</span><span class="n">center</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">center</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="c1"># Move to origin</span>
-<span class="n">rect</span><span class="o">.</span><span class="n">move_to_origin</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The center of the rectange is (12.0, 12.0)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Move it to origin:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rect</span><span class="o">.</span><span class="n">move_to_origin</span><span class="p">()</span>
 <span class="n">new_center</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">find_center</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The center of the moved rectange is </span><span class="si">{</span><span class="p">(</span><span class="n">new_center</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">new_center</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The center of the rectange is (12.0, 12.0)
-The center of the moved rectange is (0.0, 0.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The center of the moved rectange is (0.0, 0.0)
 </pre></div>
 </div>
 </div>
@@ -1144,7 +1156,7 @@ The center of the moved rectange is (0.0, 0.0)
         <span class="bp">self</span><span class="o">.</span><span class="n">bread</span> <span class="o">=</span> <span class="n">bread</span>
     
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">n_items</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">fruits</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">bread</span>
+        <span class="n">n_items</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">fruit</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">bread</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">        Shopping List:</span>
 <span class="s2">            Vegetabels: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span><span class="si">}</span><span class="s2"></span>
@@ -1164,20 +1176,12 @@ The center of the moved rectange is (0.0, 0.0)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">22</span><span class="o">-</span><span class="n">a93285b9d212</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">shopping_list</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">)</span>
-
-<span class="nn">&lt;ipython-input-21-d877ed2654e0&gt;</span> in <span class="ni">__str__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> 
-<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">----&gt; </span><span class="mi">8</span>         <span class="n">n_items</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">fruits</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">bread</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span><span class="s2">         Shopping List:</span>
-
-<span class="ne">AttributeError</span>: &#39;ShoppingList&#39; object has no attribute &#39;fruits&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>        Shopping List:
+            Vegetabels: 10
+            Fruits: 5
+            Bread: 1
+            Total items: 16
+        
 </pre></div>
 </div>
 </div>
@@ -1216,7 +1220,7 @@ The center of the moved rectange is (0.0, 0.0)
 </div>
 <div class="section" id="operator-overloading">
 <h4>Operator Overloading<a class="headerlink" href="#operator-overloading" title="Permalink to this headline">¶</a></h4>
-<p>One of the most interesting properties of Python (although it’s not unique to it) is operator overloading. It means that we can force our self-declared types (i.e. classes) to behave in a certain way with the standard mathematical operations.</p>
+<p>One of the most interesting properties of Python (although it’s not unique to it) is <a class="reference external" href="https://en.wikipedia.org/wiki/Operator_overloading">operator overloading</a>. It means that we can force our self-declared types (i.e. classes) to behave in a certain way with the standard mathematical operations.</p>
 <p>We’ll use the ShoppingList class as an example. Say we want to <strong>add</strong> two different shopping lists. Naively, we might just try the following:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1229,7 +1233,7 @@ The center of the moved rectange is (0.0, 0.0)
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">23</span><span class="o">-</span><span class="mi">0334</span><span class="n">a09f9174</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">24</span><span class="o">-</span><span class="mi">0334</span><span class="n">a09f9174</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">shopping_list_a</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">shopping_list_b</span> <span class="o">=</span> <span class="n">ShoppingList</span><span class="p">()</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">shopping_list_a</span> <span class="o">+</span> <span class="n">shopping_list_b</span><span class="p">)</span>
@@ -1263,6 +1267,7 @@ The center of the moved rectange is (0.0, 0.0)
         <span class="bp">self</span><span class="o">.</span><span class="n">bread</span> <span class="o">=</span> <span class="n">bread</span>
     
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return a string representation of this instance.&quot;&quot;&quot;</span>
         <span class="n">n_items</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">fruit</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">bread</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">        Shopping List:</span>
@@ -1332,15 +1337,15 @@ The center of the moved rectange is (0.0, 0.0)
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">26</span><span class="o">-</span><span class="n">e48709e66585</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">27</span><span class="o">-</span><span class="n">e48709e66585</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">shopping_list_a</span> <span class="o">+</span> <span class="mi">1</span>
 
-<span class="nn">&lt;ipython-input-24-f48d1b2ecc36&gt;</span> in <span class="ni">__add__</span><span class="nt">(self, other)</span>
-<span class="g g-Whitespace">     </span><span class="mi">48</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span><span class="s2">         new_list = ShoppingList(</span>
-<span class="ne">---&gt; </span><span class="mi">50</span><span class="s2">             vegetables=self.vegetables + other.vegetables,</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span><span class="s2">             fruit=self.fruit + other.fruit,</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span><span class="s2">             bread=self.bread + other.bread</span>
+<span class="nn">&lt;ipython-input-25-96536863a166&gt;</span> in <span class="ni">__add__</span><span class="nt">(self, other)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">50</span><span class="s2">         new_list = ShoppingList(</span>
+<span class="ne">---&gt; </span><span class="mi">51</span><span class="s2">             vegetables=self.vegetables + other.vegetables,</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span><span class="s2">             fruit=self.fruit + other.fruit,</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span><span class="s2">             bread=self.bread + other.bread</span>
 
 <span class="ne">AttributeError</span>: &#39;int&#39; object has no attribute &#39;vegetables&#39;
 </pre></div>

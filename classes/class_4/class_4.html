@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Class 4: The Scientific Stack (Part I - numpy) &#8212; Python for Neuroscience</title>
+    <title>Class 4: The Scientific Stack - Part I: numpy &#8212; Python for Neuroscience</title>
     
   <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -58,7 +58,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Class 5: The Scientific Stack (Part II - matplotlib and pandas)" href="../class_5/class_5.html" />
+    <link rel="next" title="Class 5: The Scientific Stack - Part II: matplotlib and pandas" href="../class_5/class_5.html" />
     <link rel="prev" title="Class 3: More OOP and Exception Handling" href="../class_3/class_3.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -129,18 +129,17 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Class 4: The Scientific Stack (Part I -
+     Class 4: The Scientific Stack - Part I:
      <code class="docutils literal notranslate">
       <span class="pre">
        numpy
       </span>
      </code>
-     )
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../class_5/class_5.html">
-     Class 5: The Scientific Stack (Part II -
+     Class 5: The Scientific Stack - Part II:
      <code class="docutils literal notranslate">
       <span class="pre">
        matplotlib
@@ -152,7 +151,6 @@
        pandas
       </span>
      </code>
-     )
     </a>
    </li>
    <li class="toctree-l2">
@@ -311,22 +309,22 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#getting-help">
-     Getting help
+     Getting Help
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#creating-arrays">
-     Creating arrays
+     Creating Arrays
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#more-on-datatypes">
-     More on datatypes
+     More on Datatypes
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#difference-between-numpy-arrays-and-lists">
-     Difference between NumPy arrays and lists
+    <a class="reference internal nav-link" href="#numpy-arrays-vs-lists">
+     NumPy Arrays vs. Lists
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -338,7 +336,7 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#indexing-and-slicing">
-     Indexing and slicing
+     Indexing and Slicing
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -355,7 +353,7 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fancy-indexing">
-     Fancy indexing
+     Fancy Indexing
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -366,39 +364,6 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#concatenation">
      Concatenation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise">
-     Exercise
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#a-familiarization">
-       a. Familiarization:
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#b-iteration-over-an-array">
-       b.
-       <em>
-        Iteration over an array:
-       </em>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#c-broadcasting">
-       c.
-       <em>
-        Broadcasting:
-       </em>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-solutions-below">
-     Exercise solutions below…
     </a>
    </li>
   </ul>
@@ -416,7 +381,7 @@
               <div>
                 
   <div class="section" id="class-4-the-scientific-stack-part-i-numpy">
-<h1>Class 4: The Scientific Stack (Part I - <code class="docutils literal notranslate"><span class="pre">numpy</span></code>)<a class="headerlink" href="#class-4-the-scientific-stack-part-i-numpy" title="Permalink to this headline">¶</a></h1>
+<h1>Class 4: The Scientific Stack - Part I: <code class="docutils literal notranslate"><span class="pre">numpy</span></code><a class="headerlink" href="#class-4-the-scientific-stack-part-i-numpy" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="scientific-python">
 <h2>Scientific Python<a class="headerlink" href="#scientific-python" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="introduction">
@@ -594,7 +559,7 @@ The len of the array is 2 - which corresponds to the shape of the 0th dimension.
 </div>
 </div>
 <div class="section" id="getting-help">
-<h3>Getting help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h3>
+<h3>Getting Help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h3>
 <p>NumPy has a ton of features, and to get around it we can use <code class="docutils literal notranslate"><span class="pre">lookfor</span></code> and the <code class="docutils literal notranslate"><span class="pre">?</span></code> sign, besides the official reference on the internet:</p>
 <div class="cell tag_output_scroll docutils container">
 <div class="cell_input docutils container">
@@ -1018,7 +983,7 @@ numpy.random.Generator.permuted
 </div>
 </div>
 <div class="section" id="creating-arrays">
-<h3>Creating arrays<a class="headerlink" href="#creating-arrays" title="Permalink to this headline">¶</a></h3>
+<h3>Creating Arrays<a class="headerlink" href="#creating-arrays" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c1"># similar to MATLAB&#39;s 0:9 (and to Python&#39;s range())</span>
@@ -1214,7 +1179,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="section" id="more-on-datatypes">
-<h3>More on datatypes<a class="headerlink" href="#more-on-datatypes" title="Permalink to this headline">¶</a></h3>
+<h3>More on Datatypes<a class="headerlink" href="#more-on-datatypes" title="Permalink to this headline">¶</a></h3>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>For more information about <code class="docutils literal notranslate"><span class="pre">dtype</span></code>s, see the <a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.dtypes.html">Data type objects (dtypes)</a> section in NumPy’s official documentation.</p>
@@ -1239,8 +1204,8 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 <p>Many array creation and handling methods have a <code class="docutils literal notranslate"><span class="pre">dtype</span></code> keyword argument, that allow you to specify the required output’s data type easily.</p>
 <p>Python will issue a <code class="docutils literal notranslate"><span class="pre">RuntimeWarning</span></code> whenever an “unsafe” conversion of data type will occur, for example from <code class="docutils literal notranslate"><span class="pre">np.float64</span></code> to <code class="docutils literal notranslate"><span class="pre">np.float32</span></code>.</p>
 </div>
-<div class="section" id="difference-between-numpy-arrays-and-lists">
-<h3>Difference between NumPy arrays and lists<a class="headerlink" href="#difference-between-numpy-arrays-and-lists" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="numpy-arrays-vs-lists">
+<h3>NumPy Arrays vs. Lists<a class="headerlink" href="#numpy-arrays-vs-lists" title="Permalink to this headline">¶</a></h3>
 <p>You might have asked yourselves by this point what’s the difference between lists and <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays. In other words, if Python already has an array-like data structure, why does it need another one?</p>
 <p>Lists are truly amazing, but their flexibility comes at a cost. You won’t notice it when you’re writing some short script, but when you start working with real datasets you notice that their performance is lacking.</p>
 <p>Naive iteration over lists is good enough when the lists contain up to a few thousands of elements, but somewhere after this invisible threshold you will start to notice the runtimes of your app turning very slow.</p>
@@ -1276,7 +1241,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>79.8 ms ± 1.66 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>95.2 ms ± 1.39 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre></div>
 </div>
 </div>
@@ -1293,7 +1258,7 @@ To make an hetetogeneous array, you have to specify its data type as <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.36 ms ± 31.2 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.15 ms ± 13.2 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1329,7 +1294,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="section" id="indexing-and-slicing">
-<h3>Indexing and slicing<a class="headerlink" href="#indexing-and-slicing" title="Permalink to this headline">¶</a></h3>
+<h3>Indexing and Slicing<a class="headerlink" href="#indexing-and-slicing" title="Permalink to this headline">¶</a></h3>
 <p>Indexing <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays is very much what you’d expect it to be.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1526,7 +1491,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>495.771044515174
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>504.86134117440565
 </pre></div>
 </div>
 </div>
@@ -1541,13 +1506,13 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>76.8 µs ± 4.15 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>98.9 µs ± 2.9 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.77 µs ± 243 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.97 µs ± 139 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.71 µs ± 64.4 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.78 µs ± 43.4 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1564,13 +1529,13 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>59.1 µs ± 3.12 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>72.4 µs ± 3.37 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.6 µs ± 374 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.76 µs ± 220 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.56 µs ± 59.9 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.86 µs ± 168 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1584,7 +1549,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.03218722440508026
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.006183400561138197
 </pre></div>
 </div>
 </div>
@@ -1597,10 +1562,10 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.14932438, 0.17261212, 0.13630452, 0.2363269 ],
-       [0.19915248, 0.22235829, 0.60984541, 0.08358889],
-       [0.10732461, 0.09957246, 0.09679031, 0.4579485 ],
-       [0.10227167, 0.11096098, 0.03218722, 0.09596764]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.02277124, 0.06643685, 0.06457815, 0.07479781],
+       [0.36966564, 0.0061834 , 0.13832204, 0.21670676],
+       [0.00687083, 0.18785249, 0.51176083, 0.11292463],
+       [0.11404037, 0.17056148, 0.36880312, 0.32255841]])
 </pre></div>
 </div>
 </div>
@@ -1613,7 +1578,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.95803817, 0.96325127, 0.97858165, 0.96450284])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.99168881, 0.9252714 , 0.95036267, 0.96129301])
 </pre></div>
 </div>
 </div>
@@ -1630,7 +1595,7 @@ Numpy array size (1M elements, MB): 4.0
 <p>Most of them have an object-oriented version, i.e. <code class="docutils literal notranslate"><span class="pre">arr.var()</span></code>, and a procedural version, i.e. <code class="docutils literal notranslate"><span class="pre">np.var(arr)</span></code>.</p>
 </div>
 <div class="section" id="fancy-indexing">
-<h3>Fancy indexing<a class="headerlink" href="#fancy-indexing" title="Permalink to this headline">¶</a></h3>
+<h3>Fancy Indexing<a class="headerlink" href="#fancy-indexing" title="Permalink to this headline">¶</a></h3>
 <p>In NumPy, indexing an array with a different array is called “fancy” indexing. Perhaps confusingly, it creates a copy, not a view.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1647,7 +1612,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">basic_array</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask</span> <span class="o">=</span> <span class="n">basic_array</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
 <span class="n">mask</span>
 </pre></div>
 </div>
@@ -1661,7 +1626,7 @@ Numpy array size (1M elements, MB): 4.0
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">basic_array</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>  <span class="c1"># also basic_array[basic_array % 2 == 0]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">basic_array</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>  <span class="c1"># same as basic_array[basic_array % 2 == 0]</span>
 <span class="n">b</span>
 </pre></div>
 </div>
@@ -1688,6 +1653,7 @@ b: [999 999 999 999 999]
 </div>
 </div>
 </div>
+<p><em>Note <code class="docutils literal notranslate"><span class="pre">basic_array</span></code> was not changed.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">float_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
@@ -1715,7 +1681,7 @@ b: [999 999 999 999 999]
 </div>
 </div>
 </div>
-<p>Counting the amount of values that fit our condition can be done as follows:</p>
+<p>Counting the number of values that satisfy some condition can be done using <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.count_nonzero.html"><code class="docutils literal notranslate"><span class="pre">np.count_nonzero()</span></code></a> or <code class="docutils literal notranslate"><span class="pre">np.sum()</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">basic_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -1914,225 +1880,263 @@ np.sum result: 5
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="exercise">
-<h3>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="a-familiarization">
-<h4>a. Familiarization:<a class="headerlink" href="#a-familiarization" title="Permalink to this headline">¶</a></h4>
+<div class="attention admonition">
+<p class="admonition-title">Familiarization Exercise</p>
 <p>Create two random 3D arrays, at least 3x3x3 in size. The first should have random integers between 0 and 100, while the second should contain floating points numbers drawn from the normal distribution, with mean -1 and standard deviation of 2</p>
 <ol class="simple">
-<li><p>What are the default datatypes of integer and floating-point arrays in numpy?</p></li>
-<li><p>Center the distribution of the first integer array around 0, with values between -1 and 1.</p></li>
-<li><p>Caclulate their mean, standard deviation along the last axis, and sum along the second axis. Remember that arrays are, like everything in Python, objects.</p></li>
+<li><p>What are the default datatypes of integer and floating-point arrays in NumPy?</p></li>
 </ol>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">low</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">high</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">array_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="n">high</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">array_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="o">*</span><span class="n">size</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">array_1</span><span class="o">.</span><span class="n">dtype</span>
+<span class="go">dtype(&#39;int64&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">array_2</span><span class="o">.</span><span class="n">dtype</span>
+<span class="go">dtype(&#39;float64&#39;)</span>
+</pre></div>
 </div>
-<div class="section" id="b-iteration-over-an-array">
-<h4>b. <em>Iteration over an array:</em><a class="headerlink" href="#b-iteration-over-an-array" title="Permalink to this headline">¶</a></h4>
-<p>Find and return the indices of the two random arrays only where <em>both elements</em> comply with -0.5 &lt;= X &lt;= 0.5. Do so in at least two distinct ways. These can include elementwise iteration, masked-arrays, and more.</p>
+</div>
+</details><ol class="simple">
+<li><p>Center the distribution of the first integer array around 0, with minimal and maximal values ranging between -1 and 1.</p></li>
+</ol>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">array_1</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">array_1</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">centered_array_1</span> <span class="o">=</span> <span class="p">(</span><span class="n">array_1</span> <span class="o">-</span> <span class="n">middle</span><span class="p">)</span> <span class="o">/</span> <span class="n">middle</span>
+</pre></div>
+</div>
+</div>
+</details><ol class="simple">
+<li><p>Calculate the mean and standard deviation of each array along the last axis, and the sum along the second axis. Use the object-oriented implementation of these functions.</p></li>
+</ol>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">array_1 (integers) stats:&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mean:</span><span class="se">\t</span><span class="si">{</span><span class="n">array_1</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">}</span><span class="se">\n</span><span class="s2">STD:</span><span class="se">\n</span><span class="si">{</span><span class="n">array_1</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s2">Sum:</span><span class="se">\n</span><span class="si">{</span><span class="n">array_1</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">array_2 (normal distribution) stats:&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mean:</span><span class="se">\t</span><span class="si">{</span><span class="n">array_2</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">}</span><span class="se">\n</span><span class="s2">STD:</span><span class="se">\n</span><span class="si">{</span><span class="n">array_2</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s2">Sum:</span><span class="se">\n</span><span class="si">{</span><span class="n">array_2</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="go">array_1 (integers) stats:</span>
+<span class="go">Mean:   49.025,</span>
+<span class="go">STD:</span>
+<span class="go">[[27.78920654 29.11717706 20.05218193 32.00312485 26.01326585 29.29573348</span>
+<span class="go">  25.86909353 28.75499957 34.52375993 24.20826305]</span>
+<span class="go"> [30.57384503 21.83689538 27.17149241 25.25787006 35.64112793 21.12912682</span>
+<span class="go">  14.4374513  23.75731466 29.45318319 31.1409698 ]</span>
+<span class="go"> [25.87063973 20.33445352 18.49432345 31.76727876 32.89924011 26.18320072</span>
+<span class="go">  28.70261312 31.11414469 25.03118056 30.24053571]</span>
+<span class="go"> [25.84202004 25.30138336 26.71048483 26.84399374 34.29518917 24.79516082</span>
+<span class="go">  33.25793138 24.05826261 28.38309356 22.46241305]</span>
+<span class="go"> [32.46921619 26.38181192 27.77426867 30.57515331 17.3104015  28.16398409</span>
+<span class="go">  29.29573348 30.30923952 28.85896741 31.8127333 ]</span>
+<span class="go"> [29.20291081 23.5246679  30.04063914 33.97072269 32.72002445 36.88482073</span>
+<span class="go">  23.46060528 38.49792202 24.27838545 31.66954373]</span>
+<span class="go"> [31.11976864 26.27717641 26.91635191 27.3086067  25.55875584 30.85919636</span>
+<span class="go">  31.20272424 15.94647296 27.45614685 25.2031744 ]</span>
+<span class="go"> [28.02231254 16.16817862 24.10311183 24.19586742 30.42696173 29.29436806</span>
+<span class="go">  22.29798197 11.81905242 32.83671725 29.80083891]</span>
+<span class="go"> [30.95545186 23.54761134 24.0840196  25.76994373 20.41568025 30.13370206</span>
+<span class="go">  25.76121115 17.87064632 28.63145124 25.72722294]</span>
+<span class="go"> [28.33372549 36.33455655 27.97570374 19.85849944 32.28374204 30.42383934</span>
+<span class="go">  31.57277308 29.06819568 30.36774605 21.08198283]]</span>
+<span class="go">Sum:</span>
+<span class="go">[[389 628 553 626 422 450 465 530 446 341]</span>
+<span class="go"> [580 487 494 408 595 601 532 344 425 549]</span>
+<span class="go"> [499 548 450 584 470 516 439 370 630 552]</span>
+<span class="go"> [461 373 472 534 657 484 521 409 497 557]</span>
+<span class="go"> [559 329 516 486 453 549 577 632 610 533]</span>
+<span class="go"> [326 573 492 411 341 659 534 538 523 406]</span>
+<span class="go"> [499 342 567 404 306 550 445 590 526 383]</span>
+<span class="go"> [428 615 495 447 559 628 602 543 470 560]</span>
+<span class="go"> [594 410 526 410 469 444 468 454 482 488]</span>
+<span class="go"> [382 432 427 560 456 525 437 435 290 442]]</span>
+
+<span class="go">array_2 (normal distribution) stats:</span>
+<span class="go">Mean:   -1.07406427297348</span>
+<span class="go">STD:</span>
+<span class="go">[[1.9062669  1.35123452 2.28887043 3.19893326 1.77835265 2.11393339</span>
+<span class="go">  1.97726446 1.80244267 1.52636428 2.31044054]</span>
+<span class="go"> [1.73597656 1.71712516 1.47350922 2.27424207 1.89264104 1.47622583</span>
+<span class="go">  1.68845783 1.80765036 1.69611444 1.16962201]</span>
+<span class="go"> [2.01873356 2.41661259 1.18562369 2.09256735 1.95677542 1.99870136</span>
+<span class="go">  1.50354672 1.71964295 2.34980052 1.94775582]</span>
+<span class="go"> [2.2962578  1.87748841 1.89627904 1.45126248 1.89634329 2.6596314</span>
+<span class="go">  1.78224436 1.42400012 2.4198374  1.10558226]</span>
+<span class="go"> [1.54355846 2.1550968  2.11254107 1.49251463 2.65904808 1.76607792</span>
+<span class="go">  2.28877444 2.48845674 1.97714146 1.93987525]</span>
+<span class="go"> [2.36294492 1.29003435 1.67418127 2.01515922 2.55921084 1.70214685</span>
+<span class="go">  1.61930304 1.66534386 1.24618498 1.67461576]</span>
+<span class="go"> [1.96178897 1.9084264  1.54803035 2.16445385 1.98760056 1.62776124</span>
+<span class="go">  1.39459135 1.56244261 1.56990164 1.04599902]</span>
+<span class="go"> [2.03492831 2.05964846 2.05118908 2.02421875 0.9999559  1.49058598</span>
+<span class="go">  1.57629449 2.39801109 1.59726342 2.23059835]</span>
+<span class="go"> [2.00656501 2.12156103 1.27455901 1.39537464 1.5390344  2.53181591</span>
+<span class="go">  1.54110338 1.04873726 1.42964864 1.99864807]</span>
+<span class="go"> [2.20401184 2.1256408  1.27375107 1.97627528 2.15301994 1.98771765</span>
+<span class="go">  1.34703697 1.84095639 2.44256394 1.86033268]]</span>
+<span class="go">Sum:</span>
+<span class="go">[[ -3.69494856 -16.42937164  -6.43041941 -15.79987592 -15.07933552</span>
+<span class="go">   -2.87887616  -6.21164117  -1.17030658 -16.98166317  -8.33184059]</span>
+<span class="go"> [ -8.31375346 -10.01798326  -4.53252787  -6.75151056 -12.59403445</span>
+<span class="go">  -15.03168533 -15.00973464 -16.74814014  -7.51746325  -5.06873569]</span>
+<span class="go"> [ -6.21037079 -12.48702723 -13.36792767 -13.62958844 -18.88755083</span>
+<span class="go">  -16.0526574   -2.96677257  -3.60762824  -9.48245148  -2.25873247]</span>
+<span class="go"> [ -9.44142793 -10.94941452 -12.60956367 -14.14565696 -11.40547929</span>
+<span class="go">  -21.41164387 -15.442485   -12.67828496 -14.61969791 -18.65552896]</span>
+<span class="go"> [-23.74338934 -15.62870646  -5.87073755  -2.67523936  -7.02999193</span>
+<span class="go">  -16.09719664 -22.51205356  -6.49143903 -25.33126019  -6.98015729]</span>
+<span class="go"> [-14.05676394 -13.55744558 -11.09719127 -16.75825685 -14.63107293</span>
+<span class="go">   -6.38490618 -12.71933776 -10.89879605 -13.34727072 -15.67801212]</span>
+<span class="go"> [-21.04560354  -4.8036513    0.8706029   -8.04820513  -4.97612456</span>
+<span class="go">  -16.2730379  -11.00863391 -13.07748112 -14.63053689 -10.53706972]</span>
+<span class="go"> [-11.405159    -6.737532   -13.7992876   -5.08953287 -11.33180152</span>
+<span class="go">  -12.02206524  -9.687376   -18.24794133 -16.52195639  -8.70169963]</span>
+<span class="go"> [ -6.41657342  -5.77920315   1.49536367  -5.43976838  -7.37647914</span>
+<span class="go">   -2.6746939  -11.93431435 -13.04875607 -10.88735467 -22.83205649]</span>
+<span class="go"> [-17.77186949  -0.24316503  -3.39047633  -9.0471082   -5.90565106</span>
+<span class="go">  -15.32306311  -0.57743855  -1.7062542  -11.35829268 -10.38006335]]</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+<div class="attention admonition">
+<p class="admonition-title">Iteration Exercise</p>
+<p>Find and return the indices of the two random arrays only where <strong>both elements</strong> satisfy <code class="docutils literal notranslate"><span class="pre">-0.5</span> <span class="pre">&lt;=</span> <span class="pre">value</span> <span class="pre">&lt;=</span> <span class="pre">0.5</span></code>. Do so in at least two distinct ways. These can include element-wise iteration, masked-arrays, and more.</p>
 <p>Time the execution of the script using the IPython <code class="docutils literal notranslate"><span class="pre">%%timeit</span></code> magic if you have this tool near at hand.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Using element-wise iteration:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">%%</span><span class="n">timeit</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">values</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">array_1</span><span class="o">.</span><span class="n">flat</span><span class="p">,</span> <span class="n">array_2</span><span class="o">.</span><span class="n">flat</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="p">(</span><span class="n">value_1</span><span class="p">,</span> <span class="n">value_2</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="k">if</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">&lt;=</span> <span class="n">value_1</span> <span class="o">&lt;=</span> <span class="mf">0.5</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">&lt;=</span> <span class="n">value_2</span> <span class="o">&lt;=</span> <span class="mf">0.5</span><span class="p">):</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span>
+<span class="go">4.55 ms ± 150 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)</span>
+</pre></div>
 </div>
-<div class="section" id="c-broadcasting">
-<h4>c. <em>Broadcasting:</em><a class="headerlink" href="#c-broadcasting" title="Permalink to this headline">¶</a></h4>
+<p class="card-text">Using a mask:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="o">%%</span><span class="n">timeit</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mask_1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">&lt;=</span> <span class="n">array_1</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">array_1</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mask_2</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">&lt;=</span> <span class="n">array_2</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">array_2</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">both</span> <span class="o">=</span> <span class="n">mask_1</span> <span class="o">&amp;</span> <span class="n">mask_2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">both</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span>  
+<span class="go">16.3 µs ± 236 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+<div class="attention admonition">
+<p class="admonition-title">Broadcasting Exercise</p>
 <ol class="simple">
 <li><p>Create a vector with length 100, filled with ones, and a 2D zero-filled array with its last dimension with size of 100.</p></li>
-<li><p>Using <code class="docutils literal notranslate"><span class="pre">np.tile</span></code>, add the vector and the array.</p></li>
-<li><p>Did you have to use <code class="docutils literal notranslate"><span class="pre">np.tile</span></code> in this case? What feature of numpy allows this?</p></li>
-<li><p>What happens to the non-tiled addition when the first dimension of the matrix is 100? Why?</p></li>
-<li><p>Bonus: How can one add the matrix (in its new shape) and vector without np.tile()?</p></li>
 </ol>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+</pre></div>
 </div>
 </div>
-<div class="section" id="exercise-solutions-below">
-<h3>Exercise solutions below…<a class="headerlink" href="#exercise-solutions-below" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># a</span>
-<span class="c1"># 1</span>
-<span class="n">low</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">high</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">arr1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="n">high</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>  <span class="c1"># dtype is np.int32</span>
-<span class="n">arr2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># dtype is np.float64</span>
+</details><ol class="simple">
+<li><p>Using <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.tile.html"><code class="docutils literal notranslate"><span class="pre">np.tile()</span></code></a>, add the vector and the array.</p></li>
+</ol>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tiled_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">vec</span><span class="p">,</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ans_tiled</span> <span class="o">=</span> <span class="n">mat</span> <span class="o">+</span> <span class="n">tiled_vec</span>
+</pre></div>
+</div>
+</div>
+</details><ol class="simple">
+<li><p>Did you have to use <code class="docutils literal notranslate"><span class="pre">np.tile()</span></code> in this case? What feature of <code class="docutils literal notranslate"><span class="pre">numpy</span></code> allows this?</p></li>
+</ol>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Array broadcasting enables the same behavior:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ans_simple</span> <span class="o">=</span> <span class="n">mat</span> <span class="o">+</span> <span class="n">vec</span>
+</pre></div>
+</div>
+</div>
+</details><ol class="simple">
+<li><p>What happens to the non-tiled addition when the first dimension of the matrix is 100? Why?</p></li>
+</ol>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mat_transposed</span> <span class="o">=</span> <span class="n">mat</span><span class="o">.</span><span class="n">T</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mat_transposed</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="go">(100, 10)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ans_trans</span> <span class="o">=</span> <span class="n">mat_transposed</span> <span class="o">+</span> <span class="n">vec</span>
+<span class="go">---------------------------------------------------------------------------</span>
+<span class="go">ValueError                                Traceback (most recent call last)</span>
+<span class="go">&lt;ipython-input-42-d2a177183ebb&gt; in &lt;module&gt;</span>
+<span class="go">----&gt; 1 ans_trans = mat_transposed + vec</span>
 
-<span class="c1"># 2</span>
-<span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">high</span> <span class="o">-</span> <span class="n">low</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
-<span class="n">arr1</span> <span class="o">=</span> <span class="p">(</span><span class="n">arr1</span> <span class="o">-</span> <span class="n">middle</span><span class="p">)</span> <span class="o">/</span> <span class="n">middle</span>
-
-<span class="c1"># 3</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;arr1 (integers) stats:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mean: </span><span class="si">{</span><span class="n">arr1</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">}</span><span class="s2">,</span><span class="se">\n</span><span class="s2">STD: </span><span class="si">{</span><span class="n">arr1</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">,</span><span class="se">\n</span><span class="s2">Sum: </span><span class="si">{</span><span class="n">arr1</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;arr2 (normal distribution) stats:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mean: </span><span class="si">{</span><span class="n">arr2</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">}</span><span class="s2">,</span><span class="se">\n</span><span class="s2">STD: </span><span class="si">{</span><span class="n">arr2</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">,</span><span class="se">\n</span><span class="s2">Sum: </span><span class="si">{</span><span class="n">arr2</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="go">ValueError: operands could not be broadcast together with shapes (100,10) (100,) </span>
+</pre></div>
+</div>
+<p class="card-text">Broadcasting is done over the last dimension.</p>
+</div>
+</details><ol class="simple">
+<li><p><em>Bonus: How can one add the matrix (in its new shape) and vector without <code class="docutils literal notranslate"><span class="pre">np.tile()</span></code>?</em></p></li>
+</ol>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ans_newaxis</span> <span class="o">=</span> <span class="n">mat_transposed</span> <span class="o">+</span> <span class="n">vec</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>arr1 (integers) stats:
-Mean: 0.013,
-STD: [[0.69731198 0.44380626 0.64875573 0.48424787 0.53016601 0.58712861
-  0.52657763 0.49624188 0.48277945 0.53428083]
- [0.52236386 0.63145546 0.49535846 0.51223432 0.51954211 0.39911903
-  0.34379645 0.47202119 0.60750309 0.48380161]
- [0.52268537 0.55058151 0.48366931 0.35681368 0.40233817 0.65268982
-  0.47868152 0.47900313 0.63269582 0.61269568]
- [0.50227084 0.31812576 0.71504965 0.46733714 0.56024637 0.46596566
-  0.332      0.58163906 0.63612577 0.56718251]
- [0.500064   0.43522868 0.49260126 0.46376287 0.70188318 0.46026514
-  0.47579828 0.58090963 0.51682105 0.7119691 ]
- [0.53704748 0.60471812 0.57952049 0.68294656 0.37640404 0.54295856
-  0.5032097  0.52351122 0.59337678 0.43561451]
- [0.5346251  0.41474812 0.63711851 0.37850231 0.44946635 0.59411783
-  0.69127129 0.65159497 0.5835889  0.52139812]
- [0.48431395 0.42502235 0.5808993  0.50150174 0.72948201 0.36560088
-  0.42672708 0.46367661 0.4442927  0.48118188]
- [0.6321677  0.59021691 0.55519366 0.55928883 0.58227141 0.63149347
-  0.55467468 0.66231111 0.49733691 0.44889197]
- [0.48201245 0.56300622 0.48540293 0.50489207 0.55568336 0.52289961
-  0.60999672 0.60674871 0.50137411 0.61333514]],
-Sum: [[-2.04000000e+00  6.40000000e-01  1.10000000e+00  1.04000000e+00
-  -3.30000000e+00 -2.06000000e+00  1.80000000e+00  2.80000000e-01
-   1.22000000e+00 -2.80000000e-01]
- [ 4.00000000e-02  9.20000000e-01  4.20000000e-01  1.60000000e-01
-  -2.36000000e+00  2.20000000e+00 -5.00000000e-01  8.00000000e-01
-  -7.60000000e-01 -3.06000000e+00]
- [ 1.36000000e+00 -1.80000000e+00 -1.20000000e+00 -3.20000000e-01
-  -2.32000000e+00 -3.12000000e+00  1.04000000e+00 -8.80000000e-01
-   2.80000000e-01  3.20000000e-01]
- [-6.60000000e-01 -1.54000000e+00  3.02000000e+00  1.20000000e+00
-   2.60000000e+00 -3.20000000e+00  1.20000000e-01 -5.40000000e-01
-  -1.70000000e+00 -8.80000000e-01]
- [-1.20000000e+00 -1.28000000e+00 -1.68000000e+00  2.82000000e+00
-   2.90000000e+00 -2.00000000e-02  1.64000000e+00  4.40000000e-01
-   9.80000000e-01  1.22000000e+00]
- [ 1.24000000e+00  3.00000000e-01  4.80000000e-01 -4.60000000e-01
-  -7.00000000e-01 -2.10000000e+00 -1.40000000e-01  2.40000000e+00
-  -6.40000000e-01 -2.22044605e-16]
- [ 2.18000000e+00 -1.90000000e+00 -2.04000000e+00  1.08000000e+00
-   1.30000000e+00 -1.78000000e+00  3.42000000e+00 -9.40000000e-01
-  -9.40000000e-01 -6.00000000e-01]
- [ 3.48000000e+00  2.44000000e+00 -1.82000000e+00  2.70000000e+00
-   1.44000000e+00  1.18000000e+00 -2.60000000e-01  1.52000000e+00
-  -1.04000000e+00 -1.36000000e+00]
- [ 7.80000000e-01 -2.12000000e+00  9.00000000e-01  3.06000000e+00
-  -1.48000000e+00  2.32000000e+00  2.80000000e+00  4.00000000e-01
-  -1.90000000e+00 -1.50000000e+00]
- [ 1.24000000e+00 -6.80000000e-01 -3.80000000e-01  3.08000000e+00
-   2.42000000e+00  4.40000000e-01 -5.60000000e-01 -1.50000000e+00
-   1.40000000e+00  1.98000000e+00]]
-arr2 (normal distribution) stats:
-Mean: -1.1559226253339205,
-STD: [[1.33387791 1.79212023 1.63542057 1.3610713  1.79518921 1.24096352
-  1.94199155 1.72076847 1.90739206 2.10073328]
- [2.48328017 1.94431912 2.10737303 2.38871876 1.74834961 1.93988302
-  2.10763959 1.71476113 2.48503789 2.00825562]
- [2.13001567 1.41945029 1.26687994 2.01661353 1.86010057 2.0386191
-  2.11616534 1.56550576 1.24540324 2.05217269]
- [1.62133972 2.15545963 1.30938649 2.17442819 1.12812865 1.44696235
-  2.28135014 1.97669299 1.51023461 1.5326045 ]
- [2.29632992 1.55791315 1.55394212 1.9929115  1.61640542 0.99686793
-  1.14910068 2.13646573 2.53423076 1.14957676]
- [1.82914943 0.79756203 1.02916632 2.05805434 1.6859935  2.16259358
-  1.82590804 1.91526003 2.05292011 1.93855529]
- [2.53819848 1.48725038 1.9020548  2.42141918 1.837596   2.67666806
-  1.86736196 2.282878   1.4123711  1.18626333]
- [2.15367007 1.78799493 1.34322284 1.73874451 1.32147097 2.20755967
-  2.04055468 1.35486518 1.54000951 1.79798759]
- [2.38891128 1.69913283 1.69937059 1.14602429 2.81495622 1.52194033
-  1.10485318 3.04610678 2.25597393 1.9845407 ]
- [1.64308519 1.49170257 1.65369299 2.00670994 1.66912506 1.58228845
-  2.09701804 1.81689816 1.32073288 1.28406002]],
-Sum: [[-12.37960583  -3.87649262  -8.97006205 -11.14768296  -9.77398668
-  -15.29060732  -0.87334719  -3.11555188  -2.19520554 -14.4681651 ]
- [ -3.50119286 -11.225882   -24.86723497 -21.41865918 -16.27860705
-   -5.92558934  -9.29037247  -7.96369323 -13.04803579 -25.42049672]
- [-18.45698806  -5.64717549  -8.60518189 -10.65651744 -13.18752378
-  -21.85761041 -21.06866656 -21.51671889 -16.86762868 -18.14378583]
- [-11.37046655 -19.20161834  -9.82219552 -18.19941303 -14.45396763
-  -12.51849974  -7.07212916 -20.19609235 -19.77198396  -4.01364988]
- [-13.85135978 -21.76740324 -13.27734016  -7.84161389  -9.74966013
-   -4.65958043 -11.27139208  -5.26837806   1.83720528  -7.87978226]
- [-19.93375235  -1.34239916  -7.07931962 -10.42540418 -13.73496696
-   -8.50162377 -12.58183158  -8.77291842  -6.71917135 -14.1149946 ]
- [-15.04773914  -9.36046615 -11.92352226 -10.96427953 -12.81883451
-   -6.6739664  -13.99083145  -6.96319754 -13.47807984  -5.26017669]
- [ -8.48022757   4.67732635 -12.51079947 -15.83184933 -17.31109266
-   -8.90559634  -7.43735223 -13.29403823 -15.95591252  -5.47640292]
- [ -7.61132654 -13.99377384 -20.56942882  -7.8967305  -21.4794915
-   -8.64622845  -5.03013914 -16.24533811  -8.67481366 -11.74094443]
- [-12.80354496  -6.72306333 -10.88892277 -17.81166346 -16.43003501
-  -11.43850449 -11.1981994  -12.05335017  -5.45366498 -11.63245268]]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>it
-<span class="c1"># b</span>
-<span class="c1"># 1 - elementwise</span>
-<span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="p">(</span><span class="n">item1</span><span class="p">,</span> <span class="n">item2</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">arr1</span><span class="o">.</span><span class="n">flat</span><span class="p">,</span> <span class="n">arr2</span><span class="o">.</span><span class="n">flat</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">&lt;=</span> <span class="n">item1</span> <span class="o">&lt;=</span> <span class="mf">0.5</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">&lt;=</span> <span class="n">item2</span> <span class="o">&lt;=</span> <span class="mf">0.5</span><span class="p">):</span>
-        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
-<span class="n">result</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>377 µs ± 16 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>it
-<span class="c1"># b</span>
-<span class="c1"># 2 - masked arrays createed by np.ravel(), np.where()</span>
-<span class="n">mask1</span> <span class="o">=</span> <span class="p">((</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">&lt;=</span> <span class="n">arr1</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">arr1</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="mf">0.5</span><span class="p">))</span>
-<span class="n">mask2</span> <span class="o">=</span> <span class="p">((</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">&lt;=</span> <span class="n">arr2</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">arr2</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="mf">0.5</span><span class="p">))</span>
-<span class="n">both_positive</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">mask1</span><span class="p">,</span> <span class="n">mask2</span><span class="p">)</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">both_positive</span><span class="p">)</span>
-<span class="n">result</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.99 µs ± 210 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
-</pre></div>
-</div>
-</div>
-</div>
-<p>As you can tell, the second solution is far more efficient than the first, and after a few read code blocks, the syntax presented there can be at least as clear as the one in the first solution.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># c</span>
-<span class="c1"># 1</span>
-<span class="n">vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
-
-<span class="c1"># 2</span>
-<span class="n">tiled_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">vec</span><span class="p">,</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>  <span class="c1"># transpose is necessary</span>
-<span class="n">ans_tiled</span> <span class="o">=</span> <span class="n">mat</span> <span class="o">+</span> <span class="n">tiled_vec</span>
-
-<span class="c1"># 3</span>
-<span class="n">ans_simple</span> <span class="o">=</span> <span class="n">mat</span> <span class="o">+</span> <span class="n">vec</span>  <span class="c1"># It&#39;s called array broadcasting</span>
-
-<span class="c1"># 4</span>
-<span class="n">mat_transposed</span> <span class="o">=</span> <span class="n">mat</span><span class="o">.</span><span class="n">T</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mat_transposed</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="c1"># ans_trans = mat_transposed + vec  # fails because broadcasting is done over the last dimension</span>
-
-<span class="c1"># 5 - np.newaxis is the answer - very perfomant</span>
-<span class="n">ans_newaxis</span> <span class="o">=</span> <span class="n">mat_transposed</span> <span class="o">+</span> <span class="n">vec</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(100, 10)
-</pre></div>
-</div>
-</div>
-</div>
+</details></div>
 </div>
 </div>
 </div>
@@ -2163,7 +2167,7 @@ Sum: [[-12.37960583  -3.87649262  -8.97006205 -11.14768296  -9.77398668
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="../class_3/class_3.html" title="previous page">Class 3: More OOP and Exception Handling</a>
-    <a class='right-next' id="next-link" href="../class_5/class_5.html" title="next page">Class 5: The Scientific Stack (Part II - <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code>)</a>
+    <a class='right-next' id="next-link" href="../class_5/class_5.html" title="next page">Class 5: The Scientific Stack - Part II: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code></a>
 
         </div>
         

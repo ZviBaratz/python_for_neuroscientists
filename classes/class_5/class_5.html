@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Class 5: The Scientific Stack - Part II: matplotlib and pandas &#8212; Python for Neuroscience</title>
     
-  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -38,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -48,7 +45,7 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -62,14 +59,14 @@
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Class 6: Advanced pandas" href="../class_6/class_6.html" />
     <link rel="prev" title="Class 4: The Scientific Stack - Part I: numpy" href="../class_4/class_4.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -78,37 +75,42 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../../index.html">
-  
-  <img src="../../_static/logo.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Python for Neuroscience</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Python for Neuroscience</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../intro.html">
    Introduction
   </a>
  </li>
 </ul>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../syllabus.html">
    Syllabus
   </a>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="../../contents.html">
    Contents
   </a>
-  <ul class="current collapse-ul">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="../class_0/class_0.html">
      Class 0: Background and Basic Syntax
@@ -166,14 +168,17 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../tutorials.html">
    Tutorials
   </a>
-  <ul class="collapse-ul">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../tutorials/python_setup.html">
      General Setup
@@ -185,8 +190,6 @@
     </a>
    </li>
   </ul>
-  <i class="fas fa-chevron-down">
-  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../resources.html">
@@ -195,6 +198,7 @@
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -257,12 +261,12 @@
     </div>
 </div>
 
-
             <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                    title="Fullscreen mode"><i
-                        class="fas fa-expand"></i></button></a>
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
 
@@ -288,12 +292,11 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-visualization-with-matplotlib">
    Data Visualization with
@@ -336,12 +339,12 @@
        Multiple plots
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#multiple-axes">
+       Multiple Axes
+      </a>
+     </li>
     </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#multiple-axes">
-     Multiple Axes
-    </a>
    </li>
   </ul>
  </li>
@@ -467,8 +470,14 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercise">
-   Exercise
+  <a class="reference internal nav-link" href="#exercise-matplotlib-s-object-oriented-interface">
+   Exercise:
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     matplotlib
+    </span>
+   </code>
+   ’s Object-oriented Interface
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -582,14 +591,13 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Exercise
+  <a class="reference internal nav-link" href="#exercise-pandas-indexing">
+   Exercise: Pandas Indexing
   </a>
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
         </div>
     </div>
 </div>
@@ -607,16 +615,21 @@
 <h2>Data Visualization with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#data-visualization-with-matplotlib" title="Permalink to this headline">¶</a></h2>
 <p>The most widely-used plotting library in the Python ecosystem is <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>. It has a number of strong alternatives and complimentary libraries, e.g. <code class="docutils literal notranslate"><span class="pre">bokeh</span></code> and <code class="docutils literal notranslate"><span class="pre">seaborn</span></code>, but in terms of raw features it still has no real contenders.</p>
 <p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> allows for <em>very</em> complicated data visualizations, and has two parallel implementations, a procedural one, and an object-oriented one. The procedural one resembles the MATLAB plotting interface very much, allowing for a very quick transition for MATLAB veterans. Evidently, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> was initially inspired by MATLAB’s approach to visualization.</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> is a collection of functions that make matplotlib work like MATLAB. Each <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> function makes some change to a figure: e.g., creates a figure, creates a plotting area in a figure, plots some lines in a plotting area, decorates the plot with labels, etc.   -<a class="reference external" href="https://matplotlib.org/stable/tutorials/introductory/pyplot.html">Docs</a></p>
+</div></blockquote>
 <p>Having said that, and considering how “old habits die hard”, it’s important to emphasize that the object-oriented interface is better in the long run, since it complies with more online examples and allows for easier plot manipulations. Finally, the “best” way to visualize your data will be to coerce it into a <code class="docutils literal notranslate"><span class="pre">seaborn</span></code>-like format and use that library to do so. More on that later.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>  <span class="c1"># pyplot is the &quot;scientific&quot; module, &#39;plt&#39; is the traditional alias</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="c1"># for notebooks, not needed for code written somewhere else:</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
 </div>
 </div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You’ll often come across notebooks with the code <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code> executed in some cell preceding plot generation. This command used to be required in order to set <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>’s backend configuration to <em>inline</em>, which would enable the inclusion of plots within the notebook (rather than pop-up windows). While still a common practice, it no longer makes any significant difference in general use.</p>
 </div>
 <div class="section" id="procedural-implementation-examples">
 <h3>Procedural Implementation Examples<a class="headerlink" href="#procedural-implementation-examples" title="Permalink to this headline">¶</a></h3>
@@ -629,15 +642,15 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb86763fc40&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f355e3ebdf0&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/class_5_8_1.png" src="../../_images/class_5_8_1.png" />
+<img alt="../../_images/class_5_9_1.png" src="../../_images/class_5_9_1.png" />
 </div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Note how <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> returns an object representing the plotted data. To avoid showing that object’s memory signature in our output we can simply return that object to a “throwaway variable” to be ignored::</p>
+<p>Note how <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> returns an object representing the plotted data. To avoid displaying the textual representation of this object and keep your notebooks clean, simply assign it to a “throwaway variable”:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>_ = plt.plot([1, 2, 3.5, 8])
 </pre></div>
 </div>
@@ -652,7 +665,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_11_0.png" src="../../_images/class_5_11_0.png" />
+<img alt="../../_images/class_5_12_0.png" src="../../_images/class_5_12_0.png" />
 </div>
 </div>
 </div>
@@ -660,16 +673,16 @@
 <h4>Histogram<a class="headerlink" href="#histogram" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">24</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>  <span class="c1"># works with lists as well as numpy arrays</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of students&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time in Class&#39;</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mf">10e4</span><span class="p">))</span> <span class="c1"># random numbers from normal distribution</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>  <span class="c1"># works with lists as well as numpy arrays</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Count&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Standardized Height&quot;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="s2">&quot;Height Counts&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_13_0.png" src="../../_images/class_5_13_0.png" />
+<img alt="../../_images/class_5_14_0.png" src="../../_images/class_5_14_0.png" />
 </div>
 </div>
 </div>
@@ -693,14 +706,12 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">])</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">28</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span>
-    <span class="s1">&#39;Time [seconds]&#39;</span>
-<span class="p">)</span>  <span class="c1"># the two objects inside the axis object have the same scale</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Time [seconds]&#39;</span><span class="p">)</span>  <span class="c1"># the two objects inside the axis object have the same scale</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_17_0.png" src="../../_images/class_5_17_0.png" />
+<img alt="../../_images/class_5_18_0.png" src="../../_images/class_5_18_0.png" />
 </div>
 </div>
 <p>To save a plot we could use the <code class="docutils literal notranslate"><span class="pre">Figure</span></code> object’s <a class="reference external" href="https://matplotlib.org/3.1.0/api/_as_gen/matplotlib.figure.Figure.html?highlight=savefig#matplotlib.figure.Figure.savefig"><code class="docutils literal notranslate"><span class="pre">savefig()</span></code></a> method:</p>
@@ -743,30 +754,29 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_21_0.png" src="../../_images/class_5_21_0.png" />
-</div>
+<img alt="../../_images/class_5_22_0.png" src="../../_images/class_5_22_0.png" />
 </div>
 </div>
 </div>
 <div class="section" id="multiple-axes">
-<h3>Multiple Axes<a class="headerlink" href="#multiple-axes" title="Permalink to this headline">¶</a></h3>
+<h4>Multiple Axes<a class="headerlink" href="#multiple-axes" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1"># random numbers from normal distribution</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1_000</span><span class="p">)</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>  <span class="c1"># 4 axes in a 2-by-2 grid.</span>
 <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
 <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-.&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
 <span class="n">_</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">hist2d</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_23_0.png" src="../../_images/class_5_23_0.png" />
+<img alt="../../_images/class_5_24_0.png" src="../../_images/class_5_24_0.png" />
 </div>
 </div>
-<p>Note that “axes” is a numpy.ndarray instance, and that in order to draw on a specific axis (plot), we start by calling the specific axis according to it’s location on the array.</p>
+<p>Note that “axes” is a <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> instance, and that in order to draw on a specific axis (plot), we start by calling the specific axis according to it’s location on the array.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">axs</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -796,7 +806,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_25_0.png" src="../../_images/class_5_25_0.png" />
+<img alt="../../_images/class_5_26_0.png" src="../../_images/class_5_26_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -819,7 +829,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_26_0.png" src="../../_images/class_5_26_0.png" />
+<img alt="../../_images/class_5_27_0.png" src="../../_images/class_5_27_0.png" />
 </div>
 </div>
 <p>Using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>’s <a class="reference external" href="https://matplotlib.org/3.3.2/api/style_api.html#module-matplotlib.style"><code class="docutils literal notranslate"><span class="pre">style</span></code></a> objects open up a world of possibilities.</p>
@@ -847,7 +857,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_31_0.png" src="../../_images/class_5_31_0.png" />
+<img alt="../../_images/class_5_32_0.png" src="../../_images/class_5_32_0.png" />
+</div>
 </div>
 </div>
 </div>
@@ -874,7 +885,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;__header__&#39;: b&#39;MATLAB 5.0 MAT-file Platform: posix, Created on: Sun Apr 18 08:21:18 2021&#39;,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;__header__&#39;: b&#39;MATLAB 5.0 MAT-file Platform: posix, Created on: Sat Apr 24 10:27:05 2021&#39;,
  &#39;__version__&#39;: &#39;1.0&#39;,
  &#39;__globals__&#39;: [],
  &#39;a&#39;: array([[1., 1., 1.],
@@ -930,7 +941,19 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_39_0.png" src="../../_images/class_5_39_0.png" />
+<img alt="../../_images/class_5_40_0.png" src="../../_images/class_5_40_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3.06560486 1.49746861]
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -947,7 +970,7 @@
 
 <span class="c1"># Draw histograms describing the distributions</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Calculate the T-test for the means of two independent samples of scores</span>
@@ -956,10 +979,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ttest_indResult(statistic=-2.3101856662816664, pvalue=0.022778518842554017)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ttest_indResult(statistic=-1.1325315972301933, pvalue=0.25991913065218386)
 </pre></div>
 </div>
-<img alt="../../_images/class_5_41_1.png" src="../../_images/class_5_41_1.png" />
+<img alt="../../_images/class_5_43_1.png" src="../../_images/class_5_43_1.png" />
 </div>
 </div>
 </div>
@@ -970,7 +993,7 @@
 <p>Let’s examine some of IPython’s other features, accessible by using the <code class="docutils literal notranslate"><span class="pre">%</span></code> <a class="reference external" href="https://ipython.readthedocs.io/en/stable/interactive/magics.html"><em>magic</em></a> operator before writing your actual code:</p>
 <div class="section" id="timeit-micro-benchmarking">
 <h3><code class="docutils literal notranslate"><span class="pre">%%timeit</span></code> - micro-benchmarking<a class="headerlink" href="#timeit-micro-benchmarking" title="Permalink to this headline">¶</a></h3>
-<p><em>Time execution of a Python statement or expression</em></p>
+<p><em>Time execution of a Python statement or expression.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">loop_and_sum</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
@@ -989,7 +1012,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>332 ns ± 7.17 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>357 ns ± 4.63 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1001,7 +1024,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>773 µs ± 38.3 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>736 µs ± 32.3 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1010,7 +1033,7 @@
 <div class="section" id="prun-benchmark-each-function-line">
 <h3><code class="docutils literal notranslate"><span class="pre">%%prun</span></code> - benchmark each function line<a class="headerlink" href="#prun-benchmark-each-function-line" title="Permalink to this headline">¶</a></h3>
 <p><em>Run a statement through the python code profiler.</em></p>
-<div class="cell docutils container">
+<div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%prun</span>
 <span class="n">data1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">500000</span><span class="p">)</span>
@@ -1021,11 +1044,19 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>          <span class="mi">7</span> <span class="n">function</span> <span class="n">calls</span> <span class="ow">in</span> <span class="mf">0.018</span> <span class="n">seconds</span>
+
+   <span class="n">Ordered</span> <span class="n">by</span><span class="p">:</span> <span class="n">internal</span> <span class="n">time</span>
+
+   <span class="n">ncalls</span>  <span class="n">tottime</span>  <span class="n">percall</span>  <span class="n">cumtime</span>  <span class="n">percall</span> <span class="n">filename</span><span class="p">:</span><span class="n">lineno</span><span class="p">(</span><span class="n">function</span><span class="p">)</span>
+        <span class="mi">1</span>    <span class="mf">0.015</span>    <span class="mf">0.015</span>    <span class="mf">0.018</span>    <span class="mf">0.018</span> <span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="p">:</span><span class="mi">1</span><span class="p">(</span><span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">)</span>
+        <span class="mi">2</span>    <span class="mf">0.002</span>    <span class="mf">0.001</span>    <span class="mf">0.002</span>    <span class="mf">0.001</span> <span class="p">{</span><span class="n">built</span><span class="o">-</span><span class="ow">in</span> <span class="n">method</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">}</span>
+        <span class="mi">1</span>    <span class="mf">0.001</span>    <span class="mf">0.001</span>    <span class="mf">0.001</span>    <span class="mf">0.001</span> <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">19</span><span class="o">-</span><span class="n">aecde78c78c4</span><span class="o">&gt;</span><span class="p">:</span><span class="mi">1</span><span class="p">(</span><span class="n">loop_and_sum</span><span class="p">)</span>
+        <span class="mi">1</span>    <span class="mf">0.000</span>    <span class="mf">0.000</span>    <span class="mf">0.018</span>    <span class="mf">0.018</span> <span class="p">{</span><span class="n">built</span><span class="o">-</span><span class="ow">in</span> <span class="n">method</span> <span class="n">builtins</span><span class="o">.</span><span class="n">exec</span><span class="p">}</span>
+        <span class="mi">1</span>    <span class="mf">0.000</span>    <span class="mf">0.000</span>    <span class="mf">0.000</span>    <span class="mf">0.000</span> <span class="p">{</span><span class="n">built</span><span class="o">-</span><span class="ow">in</span> <span class="n">method</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">}</span>
+        <span class="mi">1</span>    <span class="mf">0.000</span>    <span class="mf">0.000</span>    <span class="mf">0.000</span>    <span class="mf">0.000</span> <span class="p">{</span><span class="n">method</span> <span class="s1">&#39;disable&#39;</span> <span class="n">of</span> <span class="s1">&#39;_lsprof.Profiler&#39;</span> <span class="n">objects</span><span class="p">}</span>
 </pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="run-run-external-script">
@@ -1038,10 +1069,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1618734087.886454
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 432x288 with 0 Axes&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1619260034.8667347
 </pre></div>
 </div>
 </div>
@@ -1070,20 +1098,25 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">data</span><span class="p">,</span> <span class="n">io</span><span class="p">,</span> <span class="n">filters</span>
-<span class="n">fig</span><span class="p">,</span><span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="n">fig</span><span class="p">,</span><span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span> <span class="p">,</span><span class="mi">2</span> <span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Plot original image</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">coins</span><span class="p">()</span>
 <span class="n">io</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Edges&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Original&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+
+<span class="c1"># Plot edges</span>
 <span class="n">edges</span> <span class="o">=</span> <span class="n">filters</span><span class="o">.</span><span class="n">sobel</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>  <span class="c1"># edge-detection filter</span>
-<span class="c1"># plt.figure()</span>
 <span class="n">io</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">edges</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Original&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Edges&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_61_0.png" src="../../_images/class_5_61_0.png" />
+<img alt="../../_images/class_5_68_0.png" src="../../_images/class_5_68_0.png" />
 </div>
 </div>
 </div>
@@ -1134,7 +1167,7 @@ In this example, two phases are clearly visible, but the data are too noisy to p
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_64_0.png" src="../../_images/class_5_64_0.png" />
+<img alt="../../_images/class_5_71_0.png" src="../../_images/class_5_71_0.png" />
 </div>
 </div>
 </div>
@@ -1144,32 +1177,37 @@ In this example, two phases are clearly visible, but the data are too noisy to p
 <p class="admonition-title">Further reading</p>
 <p>We use template matching to identify the occurrence of an image patch (in this case, a sub-image centered on a single coin). Here, we return a single match (the exact same coin), so the maximum value in the match_template result corresponds to the coin location. The other coins look similar, and thus have local maxima; if you expect multiple matches, you should use a proper peak-finding function.
 <br />
-The match_template function uses fast, normalized cross-correlation 1 to find instances of the template in the image. Note that the peaks in the output of match_template correspond to the origin (i.e. top-left corner) of the template.</p>
+The <code class="docutils literal notranslate"><span class="pre">match_template()</span></code> function uses fast, normalized cross-correlation 1 to find instances of the template in the image. Note that the peaks in the output of <code class="docutils literal notranslate"><span class="pre">match_template()</span></code> correspond to the origin (i.e. top-left corner) of the template.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">skimage.feature</span> <span class="kn">import</span> <span class="n">match_template</span>
 
+<span class="c1"># Extract original coin image</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">skimage</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">coins</span><span class="p">()</span>
 <span class="n">coin</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="mi">170</span><span class="p">:</span><span class="mi">220</span><span class="p">,</span> <span class="mi">75</span><span class="p">:</span><span class="mi">130</span><span class="p">]</span>
 
+<span class="c1"># Find match</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">match_template</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">coin</span><span class="p">)</span>
 <span class="n">ij</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">result</span><span class="p">),</span> <span class="n">result</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">ij</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
+<span class="c1"># Create figure and subplots</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">adjustable</span><span class="o">=</span><span class="s1">&#39;box&#39;</span><span class="p">)</span>
 <span class="n">ax3</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="n">ax2</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="n">ax2</span><span class="p">,</span> <span class="n">adjustable</span><span class="o">=</span><span class="s1">&#39;box&#39;</span><span class="p">)</span>
 
+<span class="c1"># Plot original coin</span>
 <span class="n">ax1</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">coin</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
 <span class="n">ax1</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;template&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Template&#39;</span><span class="p">)</span>
 
+<span class="c1"># Plot original image</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;image&#39;</span><span class="p">)</span>
-<span class="c1"># highlight matched region</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Image&#39;</span><span class="p">)</span>
+<span class="c1"># (highlight matched region)</span>
 <span class="n">hcoin</span><span class="p">,</span> <span class="n">wcoin</span> <span class="o">=</span> <span class="n">coin</span><span class="o">.</span><span class="n">shape</span>
 <span class="n">rect</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span>
                      <span class="n">wcoin</span><span class="p">,</span>
@@ -1179,27 +1217,24 @@ The match_template function uses fast, normalized cross-correlation 1 to find in
                      <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">rect</span><span class="p">)</span>
 
+<span class="c1"># Plot the result of match_template()</span>
 <span class="n">ax3</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 <span class="n">ax3</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
-<span class="n">ax3</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;`match_template`</span><span class="se">\n</span><span class="s1">result&#39;</span><span class="p">)</span>
-<span class="c1"># highlight matched region</span>
+<span class="n">ax3</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;match_template()</span><span class="se">\n</span><span class="s1">Result&#39;</span><span class="p">)</span>
+<span class="c1"># (highlight matched region)</span>
 <span class="n">ax3</span><span class="o">.</span><span class="n">autoscale</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">ax3</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">markeredgecolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">ax3</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">markeredgecolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb8562fee20&gt;]
-</pre></div>
-</div>
-<img alt="../../_images/class_5_67_1.png" src="../../_images/class_5_67_1.png" />
+<img alt="../../_images/class_5_74_0.png" src="../../_images/class_5_74_0.png" />
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="exercise">
-<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
-<p>Perform these exercises using the object-oriented interface of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>. Search for the proper methods from the different SciPy and <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> modules.</p>
+<div class="section" id="exercise-matplotlib-s-object-oriented-interface">
+<h2>Exercise: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>’s Object-oriented Interface<a class="headerlink" href="#exercise-matplotlib-s-object-oriented-interface" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>Create 1000 normally-distributed points. Histogram them. Overlay the histogram with a dashed line showing the theoretical normal distribution we would expect from the data.</p></li>
 </ol>
@@ -1212,14 +1247,13 @@ The match_template function uses fast, normalized cross-correlation 1 to find in
 <span class="n">x_axis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">)</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
-        <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># the &quot;density&quot; keyword simplifies the scaling</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">_</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s1">&#39;--&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_70_0.png" src="../../_images/class_5_70_0.png" />
+<img alt="../../_images/class_5_77_0.png" src="../../_images/class_5_77_0.png" />
 </div>
 </div>
 <ol class="simple">
@@ -1234,7 +1268,7 @@ The match_template function uses fast, normalized cross-correlation 1 to find in
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_72_0.png" src="../../_images/class_5_72_0.png" />
+<img alt="../../_images/class_5_79_0.png" src="../../_images/class_5_79_0.png" />
 </div>
 </div>
 <ol class="simple">
@@ -1247,9 +1281,8 @@ The match_template function uses fast, normalized cross-correlation 1 to find in
 <span class="n">num</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">rolls</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">die</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">roll</span><span class="p">,</span> <span class="n">axis</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
-    <span class="n">axis</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">num</span><span class="p">),</span> <span class="n">rolls</span> <span class="o">==</span> <span class="n">roll</span><span class="p">,</span>
-                 <span class="n">s</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># notice how we plot a boolean vector</span>
+<span class="k">for</span> <span class="n">roll</span><span class="p">,</span> <span class="n">axis</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span> <span class="c1"># Using 1 as the enumeration&#39;s starting index</span>
+    <span class="n">axis</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">num</span><span class="p">),</span> <span class="n">rolls</span> <span class="o">==</span> <span class="n">roll</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span> 
     <span class="n">axis</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">roll</span><span class="p">)</span>
     <span class="n">axis</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticks</span><span class="p">([])</span>
 
@@ -1266,7 +1299,7 @@ The match_template function uses fast, normalized cross-correlation 1 to find in
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_74_0.png" src="../../_images/class_5_74_0.png" />
+<img alt="../../_images/class_5_81_0.png" src="../../_images/class_5_81_0.png" />
 </div>
 </div>
 </div>
@@ -1274,8 +1307,8 @@ The match_template function uses fast, normalized cross-correlation 1 to find in
 <h2>Data Analysis with <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#data-analysis-with-pandas" title="Permalink to this headline">¶</a></h2>
 <p><img alt="pandas" src="../../_images/pandas.jpeg" /></p>
 <p>A large part of what makes Python so popular nowadays is <a class="reference external" href="https://pandas.pydata.org/"><code class="docutils literal notranslate"><span class="pre">pandas</span></code></a>, or the “Python data analysis library”.</p>
-<p><code class="docutils literal notranslate"><span class="pre">pandas</span></code> has been around since 2008, and while in itself it’s built on the solid foundations of <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, it introduced a vast array of important features that can hardly be found anywhere outside of the Python ecosystem.</p>
-<p>The general priniciple in working with <code class="docutils literal notranslate"><span class="pre">pandas</span></code> is to first look up in its immense codebase (via its docs), or somewhere online, an existing function that does exactly what you’re looking for, and if you can’t - only then should you implement it youself.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pandas</span></code> has been around since 2008, and while in itself it’s built on the solid foundations of <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, it introduced a vast array of important features that can hardly be found anywhere outside of the Python ecosystem. If you can’t find a function that does what you’re trying to do in the documentation, there’s probably a StackOverflow answer or blog-post somewhere with a proposed implementation. Frankly, if you can’t find even that, it might be a good time to stop and make sure you 100% understand what you’re trying to do and why the implementation you have in mind is the “correct” way to do it. Only when and if you reach a positive conclusion, implement it yourself.</p>
+<p>The general priniciple in working with <code class="docutils literal notranslate"><span class="pre">pandas</span></code> is to first look up in its immense codebase (via its docs). or somewhere online, an existing function that does exactly what you’re looking for, and if you can’t - only then should you implement it youself.</p>
 <p>Much of the discussion below is taken from the <a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook</a>, by Jake VanderPlas. Be sure to check it out if you need further help with one of the topics.</p>
 <div class="section" id="the-need-for-pandas">
 <h3>The need for <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#the-need-for-pandas" title="Permalink to this headline">¶</a></h3>
@@ -1301,20 +1334,21 @@ The match_template function uses fast, normalized cross-correlation 1 to find in
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mf">50.</span><span class="p">,</span> <span class="mf">100.</span><span class="p">,</span> <span class="mf">150.</span><span class="p">,</span> <span class="mf">200.</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;ca_cell1&#39;</span><span class="p">)</span>
 <span class="c1"># the first argument is the data argument, list-like, just like for numpy</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The output:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">series</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Its class:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="nb">type</span><span class="p">(</span><span class="n">series</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The output:</span><span class="se">\n</span><span class="si">{</span><span class="n">series</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Its class:</span><span class="se">\n</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">series</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The output:
- 0     50.0
+0     50.0
 1    100.0
 2    150.0
 3    200.0
 Name: ca_cell1, dtype: float64
+
 Its class:
- &lt;class &#39;pandas.core.series.Series&#39;&gt;
+&lt;class &#39;pandas.core.series.Series&#39;&gt;
 </pre></div>
 </div>
 </div>
@@ -1488,16 +1522,17 @@ dtype: object
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">continents</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">Europe</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">Africa</span><span class="o">=</span><span class="mi">21</span><span class="p">,</span> <span class="n">America</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">Asia</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">Australia</span><span class="o">=</span><span class="mi">19</span><span class="p">)</span>
 <span class="n">continents_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">continents</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original dictionary:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">continents</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pandas series:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">continents_series</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dictionary:</span><span class="se">\n</span><span class="si">{</span><span class="n">continents</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Series:</span><span class="se">\n</span><span class="si">{</span><span class="n">continents_series</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Original dictionary:
- {&#39;Europe&#39;: 10, &#39;Africa&#39;: 21, &#39;America&#39;: 9, &#39;Asia&#39;: 9, &#39;Australia&#39;: 19}
-Pandas series:
- Europe       10
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dictionary:
+{&#39;Europe&#39;: 10, &#39;Africa&#39;: 21, &#39;America&#39;: 9, &#39;Asia&#39;: 9, &#39;Australia&#39;: 19}
+
+Series:
+Europe       10
 Africa       21
 America       9
 Asia          9
@@ -1512,10 +1547,10 @@ dtype: int64
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Indices override the data:</span><span class="se">\n</span><span class="si">{</span><span class="n">series_1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Indices override the data:</span><span class="se">\n</span><span class="si">{</span><span class="n">series_1</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="n">series_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Indices can add NaNs:</span><span class="se">\n</span><span class="si">{</span><span class="n">series_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Missing indices will be interpreted as NaNs:</span><span class="se">\n</span><span class="si">{</span><span class="n">series_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1524,7 +1559,8 @@ dtype: int64
 a    1
 b    2
 dtype: int64
-Indices can add NaNs:
+
+Missing indices will be interpreted as NaNs:
 a    1.0
 b    2.0
 c    3.0
@@ -1614,7 +1650,8 @@ Name: Unnamed, dtype: int64
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First we define a second series</span>
 <span class="n">populations</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
-    <span class="nb">dict</span><span class="p">(</span><span class="n">Europe</span><span class="o">=</span><span class="mf">100.</span><span class="p">,</span> <span class="n">Africa</span><span class="o">=</span><span class="mf">907.8</span><span class="p">,</span> <span class="n">America</span><span class="o">=</span><span class="mf">700.1</span><span class="p">,</span> <span class="n">Asia</span><span class="o">=</span><span class="mf">2230.</span><span class="p">,</span> <span class="n">Australia</span><span class="o">=</span><span class="mf">73.7</span><span class="p">))</span>
+    <span class="nb">dict</span><span class="p">(</span><span class="n">Europe</span><span class="o">=</span><span class="mf">100.</span><span class="p">,</span> <span class="n">Africa</span><span class="o">=</span><span class="mf">907.8</span><span class="p">,</span> <span class="n">America</span><span class="o">=</span><span class="mf">700.1</span><span class="p">,</span> <span class="n">Asia</span><span class="o">=</span><span class="mf">2230.</span><span class="p">,</span> <span class="n">Australia</span><span class="o">=</span><span class="mf">73.7</span><span class="p">)</span>
+<span class="p">)</span>
 <span class="n">populations</span>
 </pre></div>
 </div>
@@ -1650,7 +1687,7 @@ Australia        73.7      19
 </div>
 </div>
 </div>
-<p>A dataframe has a row index (“index”) and a column index (columns):</p>
+<p>A dataframe has a row index (“index”) and a column index (“columns”):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Index:</span><span class="se">\t\t</span><span class="si">{</span><span class="n">olympics</span><span class="o">.</span><span class="n">index</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1930,29 +1967,29 @@ Columns:	Index([&#39;population&#39;, &#39;medals&#39;], dtype=&#39;object&#39;)
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.861132</td>
-      <td>0.519063</td>
-      <td>0.534897</td>
-      <td>0.617211</td>
-      <td>0.980681</td>
-      <td>0.519064</td>
-      <td>0.401671</td>
-      <td>0.611584</td>
-      <td>0.381599</td>
-      <td>0.835021</td>
+      <td>0.033927</td>
+      <td>0.673642</td>
+      <td>0.371519</td>
+      <td>0.680165</td>
+      <td>0.202510</td>
+      <td>0.128160</td>
+      <td>0.648146</td>
+      <td>0.905641</td>
+      <td>0.951488</td>
+      <td>0.349916</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.073334</td>
-      <td>0.811418</td>
-      <td>0.032389</td>
-      <td>0.223271</td>
-      <td>0.043296</td>
-      <td>0.370170</td>
-      <td>0.223344</td>
-      <td>0.432963</td>
-      <td>0.373458</td>
-      <td>0.311055</td>
+      <td>0.774156</td>
+      <td>0.103484</td>
+      <td>0.612997</td>
+      <td>0.969209</td>
+      <td>0.494039</td>
+      <td>0.081203</td>
+      <td>0.444509</td>
+      <td>0.715891</td>
+      <td>0.795246</td>
+      <td>0.067729</td>
     </tr>
   </tbody>
 </table>
@@ -2227,7 +2264,7 @@ Name: three, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_151_0.png" src="../../_images/class_5_151_0.png" />
+<img alt="../../_images/class_5_159_0.png" src="../../_images/class_5_159_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2237,7 +2274,7 @@ Name: three, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_152_0.png" src="../../_images/class_5_152_0.png" />
+<img alt="../../_images/class_5_160_0.png" src="../../_images/class_5_160_0.png" />
 </div>
 </div>
 <p>More plotting methods will be shown in class 8.</p>
@@ -2317,16 +2354,16 @@ Name: three, dtype: float64
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We create a intermediate dataframe and run the calculations on it</span>
 <span class="n">area</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">45</span><span class="p">]</span>
 <span class="n">olympics_new</span><span class="p">[</span><span class="s2">&quot;area&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">area</span>
-<span class="n">olympics_new</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">rel_area_medals</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">medals</span> <span class="o">/</span> <span class="n">x</span><span class="o">.</span><span class="n">area</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
-    <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;population&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;rel_area_medals&#39;</span><span class="p">)</span>
+<span class="n">olympics_new</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">rel_area_medals</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">medals</span> <span class="o">/</span> <span class="n">x</span><span class="o">.</span><span class="n">area</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;population&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;rel_area_medals&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Note that the DataFrame itself didn&#39;t change:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">olympics_new</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Note that the DataFrame itself didn&#39;t change:</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">olympics_new</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/class_5_158_0.png" src="../../_images/class_5_158_0.png" />
+<img alt="../../_images/class_5_166_0.png" src="../../_images/class_5_166_0.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note that the DataFrame itself didn&#39;t change:
+
             population  medals  rel_medals  area
 Europe          100.0      10    0.100000   100
 Africa          907.8      21    0.023133    89
@@ -2967,7 +3004,7 @@ Name: a, dtype: object
 <span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
 
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">77</span><span class="o">-</span><span class="mi">9</span><span class="n">b10e048991a</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">78</span><span class="o">-</span><span class="mi">9</span><span class="n">b10e048991a</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># we fail, since the key &quot;1&quot; isn&#39;t in the columns</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># df2[10] - this also fails</span>
 
@@ -2990,16 +3027,15 @@ Name: a, dtype: object
 </div>
 </div>
 </div>
-<p>This is why we generally prefer indexing with either <code class="docutils literal notranslate"><span class="pre">.loc</span></code> or <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> - we know what we’re after, and we explicitly write it.</p>
+<p>This is why we generally prefer indexing with either <code class="docutils literal notranslate"><span class="pre">.loc</span></code> or <code class="docutils literal notranslate"><span class="pre">.iloc</span></code>. We know what we’re after, and we explicitly write it.</p>
 </div>
 </div>
 <div class="section" id="indexing-with-query-and-where">
 <h3>Indexing with <code class="docutils literal notranslate"><span class="pre">query</span></code> and <code class="docutils literal notranslate"><span class="pre">where</span></code><a class="headerlink" href="#indexing-with-query-and-where" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
-<div class="section" id="id1">
-<h2>Exercise<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>Give it a try before you reveal the hidden cells (“Click to show”)!</p>
+<div class="section" id="exercise-pandas-indexing">
+<h2>Exercise: Pandas Indexing<a class="headerlink" href="#exercise-pandas-indexing" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -3008,16 +3044,10 @@ Name: a, dtype: object
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>Basics #1:</p>
+<p><strong>Basics #1</strong></p>
 <ul class="simple">
 <li><p>Create a mock <code class="docutils literal notranslate"><span class="pre">pd.Series</span></code> containing the number of autonomous cars in different cities in Israel. Use proper naming and datatypes, and have at least 7 data points.</p></li>
-<li><p>Show the mean, standard deviation and median of the Series.</p></li>
-<li><p>Create another mock Series for the population counts of the cities you used in question 1.</p></li>
-<li><p>Make a DataFrame from both series and plot (scatter plot) the number of autonomous cars as a function of the population using the pandas’ API only, without a direct call to matplotlib (besides <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code>).</p></li>
 </ul>
-</li>
-</ol>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -3029,8 +3059,17 @@ Name: a, dtype: object
     <span class="s1">&#39;Netanya&#39;</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span>
     <span class="s1">&#39;Petah Tikva&#39;</span><span class="p">:</span> <span class="mi">62</span>
 <span class="p">}</span>
-<span class="n">cars_ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;autocars&#39;</span><span class="p">)</span>  <span class="c1"># dtype is int64 automatically</span>
-<span class="n">cars_ser</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<span class="n">cars_ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Autonomous Cars Counts&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Show the mean, standard deviation and median of the Series.</p></li>
+</ul>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cars_ser</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -3043,12 +3082,15 @@ min       62.000000
 50%       80.000000
 75%      105.000000
 max      123.000000
-Name: autocars, dtype: float64
+Name: Autonomous Cars Counts, dtype: float64
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell tag_hide-input docutils container">
+<ul class="simple">
+<li><p>Create another mock Series with population counts of the cities you used.</p></li>
+</ul>
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">population</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;Tel Aviv&#39;</span><span class="p">:</span> <span class="mf">750.2</span><span class="p">,</span>
@@ -3059,7 +3101,7 @@ Name: autocars, dtype: float64
     <span class="s1">&#39;Netanya&#39;</span><span class="p">:</span> <span class="mf">400.6</span><span class="p">,</span>
     <span class="s1">&#39;Petah Tikva&#39;</span><span class="p">:</span> <span class="mf">390.1</span>
 <span class="p">}</span>
-<span class="n">pop_ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;population&#39;</span><span class="p">)</span>
+<span class="n">pop_ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">population</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">)</span>
 <span class="n">pop_ser</span>
 </pre></div>
 </div>
@@ -3072,37 +3114,30 @@ Beer Sheva       650.4
 Rishon Lezion    561.6
 Netanya          400.6
 Petah Tikva      390.1
-Name: population, dtype: float64
+Name: Population, dtype: float64
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell tag_hide-input docutils container">
+<ul class="simple">
+<li><p>Make a DataFrame from both series and plot (scatter plot) the number of autonomous cars as a function of the population using the pandas’ API only, without a direct call to <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p></li>
+</ul>
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_auto</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;cars&#39;</span><span class="p">:</span> <span class="n">cars_ser</span><span class="p">,</span> <span class="s1">&#39;pop&#39;</span><span class="p">:</span> <span class="n">pop_ser</span><span class="p">})</span>
-<span class="n">df_auto</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;pop&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;cars&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">df_auto</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;pop&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;cars&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;pop&#39;, ylabel=&#39;cars&#39;&gt;
-</pre></div>
-</div>
-<img alt="../../_images/class_5_192_1.png" src="../../_images/class_5_192_1.png" />
+<img alt="../../_images/class_5_204_0.png" src="../../_images/class_5_204_0.png" />
 </div>
 </div>
-<ol class="simple">
-<li><p>Basics #2:</p>
+<p><strong>Basics #2</strong></p>
 <ul class="simple">
 <li><p>Create three random <code class="docutils literal notranslate"><span class="pre">pd.Series</span></code> and generate a <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> from them. Name each series, but make sure to use the same, non-numeric, index for the different series.</p></li>
-<li><p>Display the underlying numpy array.</p></li>
-<li><p>Create a new column from the addition of two of the columns without the <code class="docutils literal notranslate"><span class="pre">assign()</span></code> method.</p></li>
-<li><p>Create a new column from the multiplication of two of the columns using <code class="docutils literal notranslate"><span class="pre">assign()</span></code>, and plot the result.</p></li>
-<li><p>Take the sine of the entire DF.</p></li>
 </ul>
-</li>
-</ol>
-<div class="cell tag_hide-input docutils container">
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
 
@@ -3113,29 +3148,7 @@ Name: population, dtype: float64
 <span class="n">ser0</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">col0</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;one&#39;</span><span class="p">)</span>
 <span class="n">ser1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">col1</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;two&#39;</span><span class="p">)</span>
 <span class="n">ser2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">col2</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;three&#39;</span><span class="p">)</span>
-<span class="n">ser2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a    0.708426
-b    0.045343
-c    0.059437
-d    0.131038
-e    0.097553
-f    0.073169
-g    0.799686
-h    0.118365
-i    0.833804
-j    0.492310
-Name: three, dtype: float64
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_from_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+<span class="n">df_from_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
     <span class="n">ser0</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">ser0</span><span class="p">,</span>
     <span class="n">ser1</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">ser1</span><span class="p">,</span>
     <span class="n">ser2</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">ser2</span>
@@ -3171,69 +3184,96 @@ Name: three, dtype: float64
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.655183</td>
-      <td>0.616157</td>
-      <td>0.708426</td>
+      <td>0.775101</td>
+      <td>0.336345</td>
+      <td>0.773501</td>
     </tr>
     <tr>
       <th>b</th>
-      <td>0.575595</td>
-      <td>0.343126</td>
-      <td>0.045343</td>
+      <td>0.394212</td>
+      <td>0.198954</td>
+      <td>0.905787</td>
     </tr>
     <tr>
       <th>c</th>
-      <td>0.282170</td>
-      <td>0.201915</td>
-      <td>0.059437</td>
+      <td>0.401602</td>
+      <td>0.546917</td>
+      <td>0.414868</td>
     </tr>
     <tr>
       <th>d</th>
-      <td>0.593811</td>
-      <td>0.423884</td>
-      <td>0.131038</td>
+      <td>0.410270</td>
+      <td>0.338691</td>
+      <td>0.371207</td>
     </tr>
     <tr>
       <th>e</th>
-      <td>0.931728</td>
-      <td>0.068095</td>
-      <td>0.097553</td>
+      <td>0.868364</td>
+      <td>0.342071</td>
+      <td>0.447593</td>
     </tr>
     <tr>
       <th>f</th>
-      <td>0.667449</td>
-      <td>0.327526</td>
-      <td>0.073169</td>
+      <td>0.695606</td>
+      <td>0.319339</td>
+      <td>0.698597</td>
     </tr>
     <tr>
       <th>g</th>
-      <td>0.174211</td>
-      <td>0.728797</td>
-      <td>0.799686</td>
+      <td>0.328792</td>
+      <td>0.726343</td>
+      <td>0.254782</td>
     </tr>
     <tr>
       <th>h</th>
-      <td>0.133453</td>
-      <td>0.439920</td>
-      <td>0.118365</td>
+      <td>0.266564</td>
+      <td>0.145495</td>
+      <td>0.511014</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>0.982929</td>
-      <td>0.420100</td>
-      <td>0.833804</td>
+      <td>0.655893</td>
+      <td>0.635655</td>
+      <td>0.993566</td>
     </tr>
     <tr>
       <th>j</th>
-      <td>0.717651</td>
-      <td>0.187397</td>
-      <td>0.492310</td>
+      <td>0.319608</td>
+      <td>0.684299</td>
+      <td>0.865147</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<div class="cell tag_hide-input docutils container">
+<ul class="simple">
+<li><p>Display the underlying <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array.</p></li>
+</ul>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_from_series</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.7751012 , 0.33634519, 0.77350115],
+       [0.39421177, 0.19895436, 0.90578669],
+       [0.4016018 , 0.5469174 , 0.41486812],
+       [0.41026959, 0.3386911 , 0.37120665],
+       [0.86836384, 0.34207068, 0.44759349],
+       [0.69560589, 0.31933875, 0.6985973 ],
+       [0.3287916 , 0.72634299, 0.25478205],
+       [0.26656376, 0.14549488, 0.51101364],
+       [0.65589327, 0.63565479, 0.99356606],
+       [0.31960753, 0.68429896, 0.86514677]])
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Create a new column from the addition of two of the columns without the <code class="docutils literal notranslate"><span class="pre">assign()</span></code> method.</p></li>
+</ul>
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_from_series</span><span class="p">[</span><span class="s1">&#39;four&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_from_series</span><span class="o">.</span><span class="n">one</span> <span class="o">+</span> <span class="n">df_from_series</span><span class="o">.</span><span class="n">three</span>
 <span class="n">df_from_series</span>
@@ -3268,82 +3308,84 @@ Name: three, dtype: float64
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.655183</td>
-      <td>0.616157</td>
-      <td>0.708426</td>
-      <td>1.363609</td>
+      <td>0.775101</td>
+      <td>0.336345</td>
+      <td>0.773501</td>
+      <td>1.548602</td>
     </tr>
     <tr>
       <th>b</th>
-      <td>0.575595</td>
-      <td>0.343126</td>
-      <td>0.045343</td>
-      <td>0.620939</td>
+      <td>0.394212</td>
+      <td>0.198954</td>
+      <td>0.905787</td>
+      <td>1.299998</td>
     </tr>
     <tr>
       <th>c</th>
-      <td>0.282170</td>
-      <td>0.201915</td>
-      <td>0.059437</td>
-      <td>0.341607</td>
+      <td>0.401602</td>
+      <td>0.546917</td>
+      <td>0.414868</td>
+      <td>0.816470</td>
     </tr>
     <tr>
       <th>d</th>
-      <td>0.593811</td>
-      <td>0.423884</td>
-      <td>0.131038</td>
-      <td>0.724849</td>
+      <td>0.410270</td>
+      <td>0.338691</td>
+      <td>0.371207</td>
+      <td>0.781476</td>
     </tr>
     <tr>
       <th>e</th>
-      <td>0.931728</td>
-      <td>0.068095</td>
-      <td>0.097553</td>
-      <td>1.029281</td>
+      <td>0.868364</td>
+      <td>0.342071</td>
+      <td>0.447593</td>
+      <td>1.315957</td>
     </tr>
     <tr>
       <th>f</th>
-      <td>0.667449</td>
-      <td>0.327526</td>
-      <td>0.073169</td>
-      <td>0.740618</td>
+      <td>0.695606</td>
+      <td>0.319339</td>
+      <td>0.698597</td>
+      <td>1.394203</td>
     </tr>
     <tr>
       <th>g</th>
-      <td>0.174211</td>
-      <td>0.728797</td>
-      <td>0.799686</td>
-      <td>0.973898</td>
+      <td>0.328792</td>
+      <td>0.726343</td>
+      <td>0.254782</td>
+      <td>0.583574</td>
     </tr>
     <tr>
       <th>h</th>
-      <td>0.133453</td>
-      <td>0.439920</td>
-      <td>0.118365</td>
-      <td>0.251818</td>
+      <td>0.266564</td>
+      <td>0.145495</td>
+      <td>0.511014</td>
+      <td>0.777577</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>0.982929</td>
-      <td>0.420100</td>
-      <td>0.833804</td>
-      <td>1.816732</td>
+      <td>0.655893</td>
+      <td>0.635655</td>
+      <td>0.993566</td>
+      <td>1.649459</td>
     </tr>
     <tr>
       <th>j</th>
-      <td>0.717651</td>
-      <td>0.187397</td>
-      <td>0.492310</td>
-      <td>1.209961</td>
+      <td>0.319608</td>
+      <td>0.684299</td>
+      <td>0.865147</td>
+      <td>1.184754</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<div class="cell tag_hide-input docutils container">
+<ul class="simple">
+<li><p>Create a new column from the multiplication of two of the columns using <code class="docutils literal notranslate"><span class="pre">assign()</span></code>, and plot the result.</p></li>
+</ul>
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_from_series</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">five</span><span class="o">=</span><span class="n">df_from_series</span><span class="o">.</span><span class="n">two</span> <span class="o">*</span> <span class="n">df_from_series</span><span class="o">.</span><span class="n">three</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
-    <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;five&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_from_series</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">five</span><span class="o">=</span><span class="n">df_from_series</span><span class="o">.</span><span class="n">two</span> <span class="o">*</span> <span class="n">df_from_series</span><span class="o">.</span><span class="n">three</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;five&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -3351,14 +3393,16 @@ Name: three, dtype: float64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;one&#39;, ylabel=&#39;five&#39;&gt;
 </pre></div>
 </div>
-<img alt="../../_images/class_5_197_1.png" src="../../_images/class_5_197_1.png" />
+<img alt="../../_images/class_5_212_1.png" src="../../_images/class_5_212_1.png" />
 </div>
 </div>
-<div class="cell tag_hide-input docutils container">
+<ul class="simple">
+<li><p>Take the sine of the entire dataframe.</p></li>
+</ul>
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span>
-    <span class="n">df_from_series</span>
-<span class="p">)</span>  <span class="c1"># no need for data transformations, or to use the `.to_numpy()` method</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">df_from_series</span><span class="p">)</span>
+<span class="c1"># no need for data transformations, or to use the `.to_numpy()` method</span>
 </pre></div>
 </div>
 </div>
@@ -3390,90 +3434,82 @@ Name: three, dtype: float64
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.609304</td>
-      <td>0.577903</td>
-      <td>0.650639</td>
-      <td>0.978613</td>
+      <td>0.699788</td>
+      <td>0.330039</td>
+      <td>0.698644</td>
+      <td>0.999754</td>
     </tr>
     <tr>
       <th>b</th>
-      <td>0.544334</td>
-      <td>0.336432</td>
-      <td>0.045328</td>
-      <td>0.581799</td>
+      <td>0.384081</td>
+      <td>0.197644</td>
+      <td>0.786911</td>
+      <td>0.963558</td>
     </tr>
     <tr>
       <th>c</th>
-      <td>0.278441</td>
-      <td>0.200545</td>
-      <td>0.059402</td>
-      <td>0.335001</td>
+      <td>0.390893</td>
+      <td>0.520057</td>
+      <td>0.403069</td>
+      <td>0.728733</td>
     </tr>
     <tr>
       <th>d</th>
-      <td>0.559524</td>
-      <td>0.411304</td>
-      <td>0.130663</td>
-      <td>0.663022</td>
+      <td>0.398857</td>
+      <td>0.332253</td>
+      <td>0.362740</td>
+      <td>0.704328</td>
     </tr>
     <tr>
       <th>e</th>
-      <td>0.802652</td>
-      <td>0.068043</td>
-      <td>0.097398</td>
-      <td>0.856929</td>
+      <td>0.763273</td>
+      <td>0.335439</td>
+      <td>0.432797</td>
+      <td>0.967704</td>
     </tr>
     <tr>
       <th>f</th>
-      <td>0.618984</td>
-      <td>0.321702</td>
-      <td>0.073104</td>
-      <td>0.674744</td>
+      <td>0.640851</td>
+      <td>0.313939</td>
+      <td>0.643144</td>
+      <td>0.984448</td>
     </tr>
     <tr>
       <th>g</th>
-      <td>0.173332</td>
-      <td>0.665973</td>
-      <td>0.717138</td>
-      <td>0.827083</td>
+      <td>0.322900</td>
+      <td>0.664140</td>
+      <td>0.252035</td>
+      <td>0.551010</td>
     </tr>
     <tr>
       <th>h</th>
-      <td>0.133057</td>
-      <td>0.425867</td>
-      <td>0.118089</td>
-      <td>0.249165</td>
+      <td>0.263418</td>
+      <td>0.144982</td>
+      <td>0.489062</td>
+      <td>0.701555</td>
     </tr>
     <tr>
       <th>i</th>
-      <td>0.832125</td>
-      <td>0.407852</td>
-      <td>0.740493</td>
-      <td>0.969910</td>
+      <td>0.609867</td>
+      <td>0.593705</td>
+      <td>0.837977</td>
+      <td>0.996908</td>
     </tr>
     <tr>
       <th>j</th>
-      <td>0.657617</td>
-      <td>0.186302</td>
-      <td>0.472662</td>
-      <td>0.935602</td>
+      <td>0.314194</td>
+      <td>0.632130</td>
+      <td>0.761190</td>
+      <td>0.926407</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<ol class="simple">
-<li><p>Dates and times in pandas:</p>
+<p><strong>Dates and times in pandas</strong></p>
 <ul class="simple">
 <li><p>Create a DataFrame with at least two columns, a <em>datetime index</em> (look at <code class="docutils literal notranslate"><span class="pre">pd.date_range</span></code>) and random data.</p></li>
-<li><p>Convert the dtype of one of the columns (int &lt;-&gt; float).</p></li>
-<li><p>View the top and bottom of the dataframe using the <code class="docutils literal notranslate"><span class="pre">head</span></code> and <code class="docutils literal notranslate"><span class="pre">tail</span></code> methods. Make sure to visit <code class="docutils literal notranslate"><span class="pre">describe()</span></code> as well.</p></li>
-<li><p>Use the <code class="docutils literal notranslate"><span class="pre">sort_value</span></code> by column values to sort your DF. What happened to the indices?</p></li>
-<li><p>Re-sort the dataframe with the <code class="docutils literal notranslate"><span class="pre">sort_index</span></code> method.</p></li>
-<li><p>Display the value in the third row, at the second column. What’s the most well suited indexing method?</p></li>
 </ul>
-</li>
-</ol>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;20180101&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">)</span>
@@ -3489,7 +3525,7 @@ Name: three, dtype: float64
 </div>
 </div>
 </div>
-<div class="cell tag_hide-input docutils container">
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
                   <span class="n">index</span><span class="o">=</span><span class="n">dates</span><span class="p">,</span>
@@ -3527,54 +3563,66 @@ Name: three, dtype: float64
   <tbody>
     <tr>
       <th>2018-01-31</th>
-      <td>-1.139449</td>
-      <td>2.439830</td>
-      <td>0.144737</td>
-      <td>-0.088460</td>
+      <td>0.763364</td>
+      <td>-0.075807</td>
+      <td>-0.279032</td>
+      <td>2.588676</td>
     </tr>
     <tr>
       <th>2018-02-28</th>
-      <td>0.681114</td>
-      <td>0.985983</td>
-      <td>-1.537499</td>
-      <td>0.218495</td>
+      <td>1.669971</td>
+      <td>1.205282</td>
+      <td>0.508448</td>
+      <td>-1.163089</td>
     </tr>
     <tr>
       <th>2018-03-31</th>
-      <td>0.963542</td>
-      <td>-0.130810</td>
+      <td>0.361519</td>
+      <td>1.648409</td>
       <td>NaN</td>
-      <td>-0.543581</td>
+      <td>-0.312194</td>
     </tr>
     <tr>
       <th>2018-04-30</th>
-      <td>1.370692</td>
-      <td>-1.835386</td>
-      <td>-1.788782</td>
-      <td>0.235719</td>
+      <td>1.991056</td>
+      <td>1.606881</td>
+      <td>-1.091314</td>
+      <td>1.372339</td>
     </tr>
     <tr>
       <th>2018-05-31</th>
-      <td>-1.333210</td>
-      <td>0.915615</td>
-      <td>-1.878300</td>
-      <td>0.056158</td>
+      <td>-0.133666</td>
+      <td>-0.056433</td>
+      <td>1.120706</td>
+      <td>0.290794</td>
     </tr>
     <tr>
       <th>2018-06-30</th>
-      <td>-0.239738</td>
-      <td>-0.159158</td>
-      <td>2.408093</td>
-      <td>1.094644</td>
+      <td>-1.068756</td>
+      <td>-0.782012</td>
+      <td>0.150779</td>
+      <td>-0.888266</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
+<ul class="simple">
+<li><p>Convert the dtype of one of the columns (int &lt;-&gt; float).</p></li>
+</ul>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">A</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">A</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># shows the 3 top entries. df.tail() also works</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>View the top and bottom of the dataframe using the head and tail methods. Make sure to visit describe() as well.</p></li>
+</ul>
+<div class="cell tag_hide-output tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># shows the 3 top entries. df.tail() also works</span>
 </pre></div>
 </div>
 </div>
@@ -3606,30 +3654,30 @@ Name: three, dtype: float64
   <tbody>
     <tr>
       <th>2018-01-31</th>
-      <td>-1</td>
-      <td>2.439830</td>
-      <td>0.144737</td>
-      <td>-0.088460</td>
+      <td>0</td>
+      <td>-0.075807</td>
+      <td>-0.279032</td>
+      <td>2.588676</td>
     </tr>
     <tr>
       <th>2018-02-28</th>
-      <td>0</td>
-      <td>0.985983</td>
-      <td>-1.537499</td>
-      <td>0.218495</td>
+      <td>1</td>
+      <td>1.205282</td>
+      <td>0.508448</td>
+      <td>-1.163089</td>
     </tr>
     <tr>
       <th>2018-03-31</th>
       <td>0</td>
-      <td>-0.130810</td>
+      <td>1.648409</td>
       <td>NaN</td>
-      <td>-0.543581</td>
+      <td>-0.312194</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<div class="cell tag_hide-input docutils container">
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
@@ -3670,58 +3718,61 @@ Name: three, dtype: float64
     </tr>
     <tr>
       <th>mean</th>
-      <td>-0.166667</td>
-      <td>0.369346</td>
-      <td>-0.530350</td>
-      <td>0.162163</td>
+      <td>0.166667</td>
+      <td>0.591053</td>
+      <td>0.081917</td>
+      <td>0.314710</td>
     </tr>
     <tr>
       <th>std</th>
       <td>0.752773</td>
-      <td>1.439157</td>
-      <td>1.837468</td>
-      <td>0.538559</td>
+      <td>1.027271</td>
+      <td>0.832543</td>
+      <td>1.436254</td>
     </tr>
     <tr>
       <th>min</th>
       <td>-1.000000</td>
-      <td>-1.835386</td>
-      <td>-1.878300</td>
-      <td>-0.543581</td>
+      <td>-0.782012</td>
+      <td>-1.091314</td>
+      <td>-1.163089</td>
     </tr>
     <tr>
       <th>25%</th>
-      <td>-0.750000</td>
-      <td>-0.152071</td>
-      <td>-1.788782</td>
-      <td>-0.052305</td>
+      <td>0.000000</td>
+      <td>-0.070964</td>
+      <td>-0.279032</td>
+      <td>-0.744248</td>
     </tr>
     <tr>
       <th>50%</th>
       <td>0.000000</td>
-      <td>0.392402</td>
-      <td>-1.537499</td>
-      <td>0.137326</td>
+      <td>0.574424</td>
+      <td>0.150779</td>
+      <td>-0.010700</td>
     </tr>
     <tr>
       <th>75%</th>
-      <td>0.000000</td>
-      <td>0.968391</td>
-      <td>0.144737</td>
-      <td>0.231413</td>
+      <td>0.750000</td>
+      <td>1.506481</td>
+      <td>0.508448</td>
+      <td>1.101953</td>
     </tr>
     <tr>
       <th>max</th>
       <td>1.000000</td>
-      <td>2.439830</td>
-      <td>2.408093</td>
-      <td>1.094644</td>
+      <td>1.648409</td>
+      <td>1.120706</td>
+      <td>2.588676</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<div class="cell tag_hide-input docutils container">
+<ul class="simple">
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">sort_value</span></code> by column values to sort your dataframe. What happened to the indices?</p></li>
+</ul>
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># When we sort the dataframe by the values, the indices must stay with the data! That&#39;s the point.</span>
 <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span>
@@ -3758,52 +3809,55 @@ Name: three, dtype: float64
   </thead>
   <tbody>
     <tr>
-      <th>2018-05-31</th>
-      <td>-1</td>
-      <td>0.915615</td>
-      <td>-1.878300</td>
-      <td>0.056158</td>
-    </tr>
-    <tr>
       <th>2018-04-30</th>
       <td>1</td>
-      <td>-1.835386</td>
-      <td>-1.788782</td>
-      <td>0.235719</td>
-    </tr>
-    <tr>
-      <th>2018-02-28</th>
-      <td>0</td>
-      <td>0.985983</td>
-      <td>-1.537499</td>
-      <td>0.218495</td>
+      <td>1.606881</td>
+      <td>-1.091314</td>
+      <td>1.372339</td>
     </tr>
     <tr>
       <th>2018-01-31</th>
-      <td>-1</td>
-      <td>2.439830</td>
-      <td>0.144737</td>
-      <td>-0.088460</td>
+      <td>0</td>
+      <td>-0.075807</td>
+      <td>-0.279032</td>
+      <td>2.588676</td>
     </tr>
     <tr>
       <th>2018-06-30</th>
+      <td>-1</td>
+      <td>-0.782012</td>
+      <td>0.150779</td>
+      <td>-0.888266</td>
+    </tr>
+    <tr>
+      <th>2018-02-28</th>
+      <td>1</td>
+      <td>1.205282</td>
+      <td>0.508448</td>
+      <td>-1.163089</td>
+    </tr>
+    <tr>
+      <th>2018-05-31</th>
       <td>0</td>
-      <td>-0.159158</td>
-      <td>2.408093</td>
-      <td>1.094644</td>
+      <td>-0.056433</td>
+      <td>1.120706</td>
+      <td>0.290794</td>
     </tr>
     <tr>
       <th>2018-03-31</th>
       <td>0</td>
-      <td>-0.130810</td>
+      <td>1.648409</td>
       <td>NaN</td>
-      <td>-0.543581</td>
+      <td>-0.312194</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<div class="cell tag_hide-input docutils container">
+<ul class="simple">
+<li><p>Re-sort the dataframe with the sort_index method.</p></li>
+</ul>
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="n">df2</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
@@ -3838,51 +3892,51 @@ Name: three, dtype: float64
   <tbody>
     <tr>
       <th>2018-01-31</th>
-      <td>-1</td>
-      <td>2.439830</td>
-      <td>0.144737</td>
-      <td>-0.088460</td>
+      <td>0</td>
+      <td>-0.075807</td>
+      <td>-0.279032</td>
+      <td>2.588676</td>
     </tr>
     <tr>
       <th>2018-02-28</th>
-      <td>0</td>
-      <td>0.985983</td>
-      <td>-1.537499</td>
-      <td>0.218495</td>
+      <td>1</td>
+      <td>1.205282</td>
+      <td>0.508448</td>
+      <td>-1.163089</td>
     </tr>
     <tr>
       <th>2018-03-31</th>
       <td>0</td>
-      <td>-0.130810</td>
+      <td>1.648409</td>
       <td>NaN</td>
-      <td>-0.543581</td>
+      <td>-0.312194</td>
     </tr>
     <tr>
       <th>2018-04-30</th>
       <td>1</td>
-      <td>-1.835386</td>
-      <td>-1.788782</td>
-      <td>0.235719</td>
+      <td>1.606881</td>
+      <td>-1.091314</td>
+      <td>1.372339</td>
     </tr>
     <tr>
       <th>2018-05-31</th>
-      <td>-1</td>
-      <td>0.915615</td>
-      <td>-1.878300</td>
-      <td>0.056158</td>
+      <td>0</td>
+      <td>-0.056433</td>
+      <td>1.120706</td>
+      <td>0.290794</td>
     </tr>
     <tr>
       <th>2018-06-30</th>
-      <td>0</td>
-      <td>-0.159158</td>
-      <td>2.408093</td>
-      <td>1.094644</td>
+      <td>-1</td>
+      <td>-0.782012</td>
+      <td>0.150779</td>
+      <td>-0.888266</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<div class="cell tag_hide-input docutils container">
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span>  <span class="c1"># unsorted, because we haven&#39;t used the inplace keyword</span>
 </pre></div>
@@ -3915,52 +3969,55 @@ Name: three, dtype: float64
   </thead>
   <tbody>
     <tr>
-      <th>2018-05-31</th>
-      <td>-1</td>
-      <td>0.915615</td>
-      <td>-1.878300</td>
-      <td>0.056158</td>
-    </tr>
-    <tr>
       <th>2018-04-30</th>
       <td>1</td>
-      <td>-1.835386</td>
-      <td>-1.788782</td>
-      <td>0.235719</td>
-    </tr>
-    <tr>
-      <th>2018-02-28</th>
-      <td>0</td>
-      <td>0.985983</td>
-      <td>-1.537499</td>
-      <td>0.218495</td>
+      <td>1.606881</td>
+      <td>-1.091314</td>
+      <td>1.372339</td>
     </tr>
     <tr>
       <th>2018-01-31</th>
-      <td>-1</td>
-      <td>2.439830</td>
-      <td>0.144737</td>
-      <td>-0.088460</td>
+      <td>0</td>
+      <td>-0.075807</td>
+      <td>-0.279032</td>
+      <td>2.588676</td>
     </tr>
     <tr>
       <th>2018-06-30</th>
+      <td>-1</td>
+      <td>-0.782012</td>
+      <td>0.150779</td>
+      <td>-0.888266</td>
+    </tr>
+    <tr>
+      <th>2018-02-28</th>
+      <td>1</td>
+      <td>1.205282</td>
+      <td>0.508448</td>
+      <td>-1.163089</td>
+    </tr>
+    <tr>
+      <th>2018-05-31</th>
       <td>0</td>
-      <td>-0.159158</td>
-      <td>2.408093</td>
-      <td>1.094644</td>
+      <td>-0.056433</td>
+      <td>1.120706</td>
+      <td>0.290794</td>
     </tr>
     <tr>
       <th>2018-03-31</th>
       <td>0</td>
-      <td>-0.130810</td>
+      <td>1.648409</td>
       <td>NaN</td>
-      <td>-0.543581</td>
+      <td>-0.312194</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<div class="cell tag_hide-input docutils container">
+<ul class="simple">
+<li><p>Display the value in the third row, at the second column. What is the most well suited indexing method?</p></li>
+</ul>
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Third row, second column</span>
 <span class="n">df2</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
@@ -3968,12 +4025,12 @@ Name: three, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.98598260678652
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.782012035180097
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell tag_hide-input docutils container">
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ran</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">10</span><span class="p">))</span>
 <span class="n">ran</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
@@ -3981,22 +4038,16 @@ Name: three, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.2689043566816923
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.20224457466980558
 </pre></div>
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>DataFrame comparisons and operations:</p>
+<p><strong>DataFrame comparisons and operations</strong></p>
 <ul class="simple">
 <li><p>Generate another DataFrame with at least two columns. Populate it with random values between -1 and 1.</p></li>
-<li><p>Find the places where the dataframe contains negative values, and replace them with their positive inverse (-0.21 turns to 0.21).</p></li>
-<li><p>Set one of the values to NaN using <code class="docutils literal notranslate"><span class="pre">.loc</span></code>.</p></li>
-<li><p>Drop the entire column containing this null value.</p></li>
 </ul>
-</li>
-</ol>
-<div class="cell tag_hide-input docutils container">
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">15</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;back&#39;</span><span class="p">,</span> <span class="s1">&#39;front&#39;</span><span class="p">])</span>
@@ -4030,84 +4081,87 @@ Name: three, dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>-0.647818</td>
-      <td>0.190264</td>
+      <td>-0.209192</td>
+      <td>-0.536634</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>-0.362389</td>
-      <td>-0.325276</td>
+      <td>-0.038379</td>
+      <td>-0.620591</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.840105</td>
-      <td>-0.100645</td>
+      <td>-0.725404</td>
+      <td>-0.269687</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.969717</td>
-      <td>-0.447670</td>
+      <td>-0.697240</td>
+      <td>-0.293309</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.690256</td>
-      <td>-0.150165</td>
+      <td>0.985166</td>
+      <td>-0.341689</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.021857</td>
-      <td>-0.158267</td>
+      <td>0.170456</td>
+      <td>-0.775815</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>-0.553113</td>
-      <td>0.030471</td>
+      <td>0.312422</td>
+      <td>-0.285401</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.939590</td>
-      <td>-0.254980</td>
+      <td>-0.989721</td>
+      <td>0.071819</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>0.156526</td>
-      <td>-0.327175</td>
+      <td>0.464701</td>
+      <td>-0.632956</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>-0.931198</td>
-      <td>0.666908</td>
+      <td>0.967351</td>
+      <td>-0.501923</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>0.634000</td>
-      <td>-0.004087</td>
+      <td>-0.098256</td>
+      <td>0.678813</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>-0.080540</td>
-      <td>-0.656308</td>
+      <td>0.481695</td>
+      <td>-0.536237</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>-0.076764</td>
-      <td>0.907888</td>
+      <td>0.915718</td>
+      <td>-0.851780</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>0.990141</td>
-      <td>-0.628607</td>
+      <td>-0.438306</td>
+      <td>-0.062200</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>0.028680</td>
-      <td>-0.085514</td>
+      <td>0.697195</td>
+      <td>-0.314938</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<div class="cell tag_hide-input docutils container">
+<ul class="simple">
+<li><p>Find the places where the dataframe contains negative values, and replace them with their positive inverse (-0.21 turns to 0.21).</p></li>
+</ul>
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">df</span>
 <span class="n">df</span>
@@ -4140,88 +4194,99 @@ Name: three, dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.647818</td>
-      <td>0.190264</td>
+      <td>0.209192</td>
+      <td>0.536634</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.362389</td>
-      <td>0.325276</td>
+      <td>0.038379</td>
+      <td>0.620591</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.840105</td>
-      <td>0.100645</td>
+      <td>0.725404</td>
+      <td>0.269687</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.969717</td>
-      <td>0.447670</td>
+      <td>0.697240</td>
+      <td>0.293309</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.690256</td>
-      <td>0.150165</td>
+      <td>0.985166</td>
+      <td>0.341689</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.021857</td>
-      <td>0.158267</td>
+      <td>0.170456</td>
+      <td>0.775815</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.553113</td>
-      <td>0.030471</td>
+      <td>0.312422</td>
+      <td>0.285401</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.939590</td>
-      <td>0.254980</td>
+      <td>0.989721</td>
+      <td>0.071819</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>0.156526</td>
-      <td>0.327175</td>
+      <td>0.464701</td>
+      <td>0.632956</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>0.931198</td>
-      <td>0.666908</td>
+      <td>0.967351</td>
+      <td>0.501923</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>0.634000</td>
-      <td>0.004087</td>
+      <td>0.098256</td>
+      <td>0.678813</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>0.080540</td>
-      <td>0.656308</td>
+      <td>0.481695</td>
+      <td>0.536237</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>0.076764</td>
-      <td>0.907888</td>
+      <td>0.915718</td>
+      <td>0.851780</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>0.990141</td>
-      <td>0.628607</td>
+      <td>0.438306</td>
+      <td>0.062200</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>0.028680</td>
-      <td>0.085514</td>
+      <td>0.697195</td>
+      <td>0.314938</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<div class="cell tag_hide-input docutils container">
+<ul class="simple">
+<li><p>Set one of the values to NaN using <code class="docutils literal notranslate"><span class="pre">.loc</span></code>.</p></li>
+</ul>
+<div class="cell tag_hide-input tag_hide-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Drop the column with the NaN</span>
-<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="s1">&#39;back&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
-<span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;columns&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;any&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="s1">&#39;back&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Drop the entire column containing this null value.</p></li>
+</ul>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;columns&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;any&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4250,63 +4315,63 @@ Name: three, dtype: float64
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.190264</td>
+      <td>0.536634</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.325276</td>
+      <td>0.620591</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.100645</td>
+      <td>0.269687</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.447670</td>
+      <td>0.293309</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.150165</td>
+      <td>0.341689</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>0.158267</td>
+      <td>0.775815</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>0.030471</td>
+      <td>0.285401</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>0.254980</td>
+      <td>0.071819</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>0.327175</td>
+      <td>0.632956</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>0.666908</td>
+      <td>0.501923</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>0.004087</td>
+      <td>0.678813</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>0.656308</td>
+      <td>0.536237</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>0.907888</td>
+      <td>0.851780</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>0.628607</td>
+      <td>0.062200</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>0.085514</td>
+      <td>0.314938</td>
     </tr>
   </tbody>
 </table>
@@ -4362,9 +4427,8 @@ Name: three, dtype: float64
 
       </div>
     </div>
-
     
-  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
 
     
